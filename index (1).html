@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luma Garcia — Data Analyst | Python, SQL &amp; Business Intelligence</title>
+<meta name="description" content="Portfolio of Luma Garcia, Data Analyst with 10 years of experience in analytics, business intelligence, statistical analysis and data quality. Based in Erlangen, Germany." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#faf7f3; --bg2:#f3ede6; --card:#ffffff; --ink:#2a2430; --muted:#6d6573; --line:#e6ddd3;
+    --accent:#6a3b52;        /* deep plum */
+    --accent-soft:#ead9df;
+    --gold:#b08a57;          /* muted gold */
+    --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.005em}
+  .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:block}
+  section{padding:96px 0}
+  .alt{background:var(--bg2)}
+  h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:18px}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:720px}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;background:rgba(250,247,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--accent)}
+  .links{display:flex;gap:30px;font-size:.84rem;letter-spacing:.04em;color:var(--muted)}
+  .links a:hover{color:var(--accent)}
+  .btn{display:inline-block;padding:12px 26px;border-radius:999px;font-size:.88rem;font-weight:500;letter-spacing:.03em;transition:.25s}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{background:#512b3e}
+  .btn-ghost{border:1px solid var(--accent);color:var(--accent)}
+  .btn-ghost:hover{background:var(--accent-soft)}
+  @media(max-width:760px){.links{display:none}}
+
+  /* HERO */
+  .hero{padding:90px 0 80px}
+  .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;align-items:center}
+  .hero h1{font-size:clamp(2.8rem,6vw,4.6rem);color:var(--ink)}
+  .hero h1 em{color:var(--accent);font-style:italic}
+  .role{margin-top:14px;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .hero p.lead{margin-top:26px}
+  .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .meta{margin-top:30px;font-size:.88rem;color:var(--muted)}
+  .portrait{aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden;background:linear-gradient(160deg,var(--accent-soft),#f1e3d0);display:flex;align-items:center;justify-content:center;border:1px solid var(--line);position:relative}
+  .portrait img{width:100%;height:100%;object-fit:cover}
+  .portrait .mono{font-family:var(--serif);font-size:5rem;color:var(--accent);font-weight:600}
+  .portrait.nophoto img{display:none}
+  .portrait:not(.nophoto) .mono{display:none}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.portrait{max-width:300px}}
+
+  /* STATS */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:60px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stat{padding:28px 20px;text-align:center;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-family:var(--serif);font-size:2.6rem;color:var(--accent);font-weight:600}
+  .stat span{font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+  @media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+  /* CARDS */
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px;box-shadow:0 1px 2px rgba(42,36,48,.03);transition:.3s}
+  .card:hover{box-shadow:0 14px 34px -18px rgba(106,59,82,.28);transform:translateY(-2px)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.grid2,.grid3{grid-template-columns:1fr}}
+  .card h3{font-size:1.5rem;margin-bottom:10px;color:var(--accent)}
+  .card p,.card li{color:var(--muted);font-size:.95rem}
+  .tag{display:inline-block;padding:5px 14px;border:1px solid var(--line);border-radius:999px;font-size:.8rem;color:var(--ink);background:var(--card);margin:0 6px 8px 0}
+  .tag.soft{background:var(--accent-soft);border-color:transparent;color:var(--accent)}
+  .kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;display:block}
+
+  /* EXPERIENCE */
+  .timeline{margin-top:46px;position:relative;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:var(--line)}
+  .job{position:relative;margin-bottom:44px}
+  .job::before{content:"";position:absolute;left:-34px;top:9px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:2px solid var(--accent)}
+  .alt .job::before{background:var(--bg2)}
+  .job h3{font-size:1.55rem}
+  .job .where{font-size:.9rem;color:var(--accent);font-weight:500;margin:2px 0 4px}
+  .job .when{font-size:.8rem;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+  .job .about{color:var(--muted);font-size:.93rem;margin:12px 0 10px;max-width:760px}
+  .job ul{padding-left:18px;max-width:780px}
+  .job li{color:var(--ink);font-size:.95rem;margin-bottom:6px}
+  .job li::marker{color:var(--gold)}
+
+  /* PROJECT */
+  .qa h3{font-size:1.7rem;margin:64px 0 18px}
+  .qa h3:first-of-type{margin-top:44px}
+  .bars{display:grid;gap:18px;margin-top:8px}
+  .barrow .top{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px}
+  .barrow .top span:last-child{font-variant-numeric:tabular-nums;color:var(--muted)}
+  .track{height:8px;border-radius:99px;background:var(--bg2);overflow:hidden}
+  .fill{height:100%;width:0;border-radius:99px;background:var(--accent);transition:width 1.3s cubic-bezier(.2,.8,.2,1)}
+  .fill.gold{background:var(--gold)}
+  .fill.light{background:#b794a6}
+  .note{font-size:.85rem;color:var(--muted);margin-bottom:22px}
+  .flow{max-width:900px;margin:0 auto}
+  .flow .top{text-align:center}
+  .arrow{text-align:center;color:var(--gold);font-size:1.3rem;margin:10px 0}
+  .card ul{padding-left:18px}
+  .card ul li{margin-bottom:6px}
+  .card ul li::marker{color:var(--gold)}
+  .rec .num{font-family:var(--serif);font-size:2.8rem;color:var(--gold);line-height:1;margin-bottom:8px}
+
+
+  /* PROJECT DASHBOARD */
+  .glance{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:36px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .glance div{padding:18px 20px;border-right:1px solid var(--line)}
+  .glance div:last-child{border-right:none}
+  .glance span{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:4px}
+  .glance b{font-weight:500;font-size:.86rem;color:var(--ink);line-height:1.4;display:block}
+  @media(max-width:900px){.glance{grid-template-columns:1fr 1fr}.glance div{border-bottom:1px solid var(--line)}}
+  .exec{margin-top:28px;background:var(--accent);color:#f6eef1;border-radius:18px;padding:34px 36px}
+  .exec .kicker{color:#e3c79b}
+  .exec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:6px}
+  .exec h4{font-family:var(--serif);font-size:1.35rem;font-weight:600;margin-bottom:6px;color:#fff}
+  .exec p{font-size:.93rem;color:#ecdbe2}
+  @media(max-width:860px){.exec-grid{grid-template-columns:1fr;gap:20px}}
+  .exec-headline{font-family:var(--serif);font-size:clamp(1.5rem,2.6vw,2.1rem);line-height:1.25;color:#fff;margin:6px 0 26px;max-width:820px;font-weight:600}
+  .exec-skills{margin-top:30px;padding-top:24px;border-top:1px solid rgba(255,255,255,.18)}
+  .exec-skills>span{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:#e3c79b;font-weight:600;margin-bottom:14px}
+  .exec-skills ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+  .exec-skills li{font-size:.86rem;color:#ecdbe2;line-height:1.55}
+  .exec-skills li b{display:block;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:#fff;margin-bottom:2px}
+  @media(max-width:860px){.exec-skills ul{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.exec-skills ul{grid-template-columns:1fr}}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+  .kpi b{display:block;font-family:var(--serif);font-size:3rem;font-weight:600;color:var(--accent);line-height:1}
+  .kpi small{display:block;margin-top:10px;font-size:.82rem;color:var(--muted);line-height:1.5}
+  @media(max-width:860px){.kpis{grid-template-columns:1fr 1fr}}
+  .dash{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 32px;box-shadow:0 18px 40px -28px rgba(106,59,82,.35)}
+  .dash-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap}
+  .tab{font-family:var(--sans);font-size:.82rem;padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:.2s}
+  .tab:hover{border-color:var(--accent);color:var(--accent)}
+  .tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .panel{display:none}.panel.active{display:block}
+  .panel-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+  @media(max-width:860px){.panel-grid{grid-template-columns:1fr;gap:24px}}
+  .insight{background:var(--bg);border-radius:14px;padding:22px 24px;border:1px solid var(--line)}
+  .insight p{font-size:.9rem;color:var(--muted);margin-bottom:10px}
+  .insight p b{color:var(--ink);font-weight:500}
+  em.win,em.aut{font-style:normal;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:99px;margin-left:6px;font-weight:600}
+  em.win{background:var(--accent-soft);color:var(--accent)}
+  em.aut{background:#f1e6d2;color:#8a6a3a}
+  .rchart{position:relative;padding-top:14px}
+  .rchart .ref{position:absolute;left:70%;top:-6px;bottom:-6px;border-left:1.5px dashed var(--gold);pointer-events:none;z-index:2}
+  .rchart .ref span{position:absolute;top:-18px;left:6px;font-size:.66rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+  .cols{display:flex;gap:28px;align-items:flex-end;height:260px;padding:10px 6px 0}
+  .col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+  .colbar{width:100%;max-width:90px;flex:1;display:flex;align-items:flex-end}
+  .colbar i{display:block;width:100%;height:0;border-radius:10px 10px 0 0;background:linear-gradient(180deg,var(--accent),#b794a6);transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+  .col b{margin-top:10px;font-weight:600;font-size:.95rem}
+  .col span{font-size:.78rem;color:var(--muted)}
+  .stepper{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:10px;position:relative}
+  .step{text-align:center;padding:0 12px;position:relative}
+  .step::before{content:"";position:absolute;top:22px;left:50%;right:-50%;height:1px;background:var(--line)}
+  .step:last-child::before{display:none}
+  .step i{position:relative;z-index:1;display:inline-flex;width:44px;height:44px;border-radius:50%;background:var(--card);border:1.5px solid var(--accent);color:var(--accent);font-style:normal;font-family:var(--serif);font-size:1.3rem;font-weight:600;align-items:center;justify-content:center}
+  .step b{display:block;margin-top:12px;font-weight:600;font-size:.92rem}
+  .step span{display:block;font-size:.8rem;color:var(--muted);margin-top:4px}
+  @media(max-width:760px){.stepper{grid-template-columns:1fr;gap:22px}.step::before{display:none}.step{display:flex;gap:16px;text-align:left;align-items:flex-start;padding:0}.step b{margin-top:0}}
+  details.more{margin-top:34px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 26px 26px}
+  details.more summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:500;color:var(--accent);font-size:.95rem;display:flex;justify-content:space-between}
+  details.more summary::-webkit-details-marker{display:none}
+  details.more summary::after{content:"+";font-size:1.3rem;line-height:1}
+  details.more[open] summary::after{content:"–"}
+  .next{margin-top:28px;border-left:3px solid var(--gold);padding:6px 0 6px 22px}
+  .next p{color:var(--muted);font-size:.95rem;max-width:760px}
+
+  /* EDUCATION */
+  .edu li{list-style:none;padding:16px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .edu li:last-child{border:none}
+  .edu b{font-weight:500;color:var(--ink);font-size:.97rem}
+  .edu span{color:var(--muted);font-size:.85rem}
+  .lang{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .lang:last-child{border:none}
+  .lang span:last-child{color:var(--muted)}
+
+  /* CONTACT */
+  .contact{text-align:center}
+  .contact h2{max-width:720px;margin:0 auto 18px}
+  .contact .lead{margin:0 auto}
+  .contact .cta{justify-content:center}
+  footer{padding:30px 0;text-align:center;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line)}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.show{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.fill{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#top" class="brand">Luma Garcia</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#project">Featured Project</a>
+    </div>
+    <a href="#contact" class="btn btn-primary">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="top" class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Portfolio</span>
+        <h1>Turning complex data into <em>clear, actionable</em> insight.</h1>
+        <div class="role">Data Analyst · Python, SQL &amp; Business Intelligence</div>
+        <p class="lead">I'm Luma, a Data Analyst with 10 years of experience in analytics, business intelligence, statistical analysis and data quality, with a track record of automating reporting, improving data reliability and translating data into business decisions.</p>
+        <div class="cta">
+          <a href="#project" class="btn btn-primary">View featured project</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <p class="meta">Based in Erlangen, Germany &nbsp;·&nbsp; English C1 &nbsp;·&nbsp; German B1</p>
+      </div>
+      <!-- Optional: add your photo as assets/photo.jpg. Without it, initials are shown. -->
+      <div class="portrait nophoto reveal">
+        <img src="assets/photo.jpg" alt="Portrait of Luma Garcia" onload="this.parentElement.classList.remove('nophoto')" onerror="this.parentElement.classList.add('nophoto')" />
+        <span class="mono">LG</span>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Years in data &amp; analytics</span></div>
+      <div class="stat"><b data-count="100" data-suffix="+">0</b><span>Stakeholders served by dashboards</span></div>
+      <div class="stat"><b data-count="20000" data-suffix="+">0</b><span>Records monitored monthly</span></div>
+      <div class="stat"><b data-count="70" data-suffix="%">0</b><span>Dataset size reduction</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="alt">
+  <div class="wrap">
+    <div class="grid2" style="align-items:start;gap:56px">
+      <div class="reveal">
+        <span class="eyebrow">About</span>
+        <h2>Analytics with business judgement</h2>
+      </div>
+      <div class="reveal">
+        <p class="lead" style="margin-bottom:18px">My work sits where data, engineering and business decisions meet. I have partnered with Data Engineering on a Databricks Lakehouse migration, built self-service dashboards for more than 100 stakeholders, automated data quality monitoring and applied machine learning to workforce data.</p>
+        <p class="lead" style="margin-bottom:24px">A Master's in Organizational Psychology and an ongoing MBA in Data Science and Analytics help me connect rigorous statistical methods with how organisations actually work.</p>
+        <span class="tag soft">Python</span><span class="tag soft">SQL</span><span class="tag soft">Databricks</span><span class="tag soft">Looker Studio</span><span class="tag soft">Machine Learning</span><span class="tag soft">Data Quality</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <span class="eyebrow reveal">Experience</span>
+    <h2 class="reveal">Career highlights</h2>
+    <div class="timeline">
+
+      <div class="job reveal">
+        <div class="when">Oct 2025 – Sep 2026</div>
+        <h3>Senior Data Analytics Consultant</h3>
+        <div class="where">TIM S.A. · Rio de Janeiro, Brazil</div>
+        <p class="about">TIM is a major telecommunications and technology company operating in Italy and Brazil.</p>
+        <ul>
+          <li>Analysed large-scale datasets covering 10,000 employees across 15 business units using Python, machine learning and statistical methods.</li>
+          <li>Automated qualitative data analysis and reporting with Python and Microsoft Copilot, reducing the reporting cycle from 3 months to 1 month.</li>
+          <li>Applied Random Forest, regression, clustering and correlation analysis to identify patterns and support business decisions.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="when">Sep 2021 – Oct 2025</div>
+        <h3>Data Analyst</h3>
+        <div class="where">QuintoAndar · Remote</div>
+        <p class="about">QuintoAndar is a leading real estate technology company in Latin America. Worked independently in a fully remote environment, collaborating with distributed teams and owning Talent Acquisition data and analytics processes.</p>
+        <ul>
+          <li>Partnered with Data Engineering to migrate ATS data into a Databricks Lakehouse, improving data integration, reliability and accessibility.</li>
+          <li>Built and maintained dashboards for 100+ stakeholders, enabling self-service analytics and data-driven decisions.</li>
+          <li>Automated data quality monitoring for 20,000+ records monthly and established data governance standards.</li>
+          <li>Optimised reporting infrastructure, reducing dataset size by 70% and dashboard filters by 36%, while improving refresh reliability.</li>
+        </ul>
+      </div>
+
+      <div class="job reveal">
+        <div class="when">Jan 2018 – Sep 2021</div>
+        <h3>People Analytics</h3>
+        <div class="where">M4U, a Bemobi Company · Rio de Janeiro, Brazil</div>
+        <p class="about">M4U is a financial technology company specialising in digital payment solutions, mobile payments and recurring payment management, serving major telecommunications operators.</p>
+        <ul>
+          <li>Built an analytics and reporting framework from scratch, establishing key metrics and performance reports.</li>
+          <li>Presented business insights and KPI analyses to senior leadership, including the CFO.</li>
+          <li>Used workforce data to identify improvement opportunities and support operational decision-making.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="alt">
+  <div class="wrap">
+    <span class="eyebrow reveal">Skills</span>
+    <h2 class="reveal">Tools &amp; technologies</h2>
+    <div class="grid3" style="margin-top:36px">
+      <div class="card reveal"><span class="kicker">Languages &amp; analysis</span><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Statistical analysis</span></div>
+      <div class="card reveal"><span class="kicker">Data platforms &amp; BI</span><span class="tag">Databricks</span><span class="tag">Looker Studio</span><span class="tag">Microsoft Excel</span><span class="tag">Data quality &amp; governance</span></div>
+      <div class="card reveal"><span class="kicker">Machine learning</span><span class="tag">Scikit-Learn</span><span class="tag">Random Forest</span><span class="tag">Regression</span><span class="tag">Clustering</span><span class="tag">TimeSeriesSplit</span><span class="tag">GridSearchCV</span></div>
+      <div class="card reveal"><span class="kicker">Visualisation</span><span class="tag">Matplotlib</span><span class="tag">Seaborn</span><span class="tag">Dashboards</span></div>
+      <div class="card reveal"><span class="kicker">Environment</span><span class="tag">VS Code</span><span class="tag">Jupyter Notebook</span><span class="tag">Microsoft Copilot</span></div>
+      <div class="card reveal"><span class="kicker">Ways of working</span><span class="tag">Remote &amp; distributed teams</span><span class="tag">Stakeholder reporting</span><span class="tag">Reporting automation</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <div class="grid2" style="gap:56px;align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Education</span>
+        <h2 style="font-size:2.2rem">Academic background</h2>
+        <ul class="edu" style="margin-top:20px">
+          <li><b>MBA in Data Science and Analytics</b><span>USP · 2025 – 2027</span></li>
+          <li><b>Master's in Organizational Psychology and Management</b><span>PUC-RS · 2021 – 2022</span></li>
+          <li><b>Bachelor's in Business Administration</b><span>UFRRJ · 2016 – 2021</span></li>
+          <li><b>Bachelor's in Advertising and Marketing</b><span>UNESA · 2012 – 2015</span></li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <span class="eyebrow">Languages</span>
+        <h2 style="font-size:2.2rem;margin-bottom:20px">Communication</h2>
+        <div class="lang"><span>Portuguese</span><span>Native</span></div>
+        <div class="lang"><span>English</span><span>C1</span></div>
+        <div class="lang"><span>Spanish</span><span>B2</span></div>
+        <div class="lang"><span>German</span><span>B1 (currently studying)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project" class="alt">
+  <div class="wrap qa">
+    <span class="eyebrow reveal">Featured Project</span>
+    <h2 class="reveal" style="max-width:880px">Can machine learning predict employee climate before the next survey?</h2>
+    <p class="lead reveal">Predicting year-over-year changes in climate and engagement survey favorability, and uncovering which dimensions act as organisational levers.</p>
+
+    <!-- AT A GLANCE -->
+    <div class="glance reveal">
+      <div><span>Data</span><b>3 annual survey cycles · 2023–2025</b></div>
+      <div><span>Scale</span><b>22,293 valid responses · ~9,000 employees</b></div>
+      <div><span>Scope</span><b>35 items · 9 dimensions</b></div>
+      <div><span>Methods</span><b>Regression, Ridge, Random Forest, time-series validation</b></div>
+      <div><span>Stack</span><b>Python · Pandas · Scikit-Learn · Matplotlib</b></div>
+    </div>
+
+    <!-- EXECUTIVE SUMMARY -->
+    <div class="exec reveal">
+      <span class="kicker">Executive summary · 30-second read</span>
+      <p class="exec-headline">I don't just build models. I tell the business whether to trust them, and what to do next.</p>
+      <div class="exec-grid">
+        <div><h4>The challenge</h4><p>Companies run annual climate surveys and react to the results. Can HR instead anticipate where employee sentiment will move, and know where to invest to lift the whole climate?</p></div>
+        <div><h4>What I found</h4><p>With three survey cycles, a simple "nothing changes" baseline beat Random Forest, Ridge and Linear Regression, so I said so instead of forcing a model. The nine dimensions, however, are strongly interdependent (mean R² 0.70), and three of them lift the rest.</p></div>
+        <div><h4>What I recommended</h4><p>Invest in autonomy and process efficiency, act directly on pay and well-being, and hold off on predictive AI until there is a longer data history.</p></div>
+      </div>
+      <div class="exec-skills">
+        <span>What this shows about how I work</span>
+        <ul>
+          <li><b>Rigour</b> Strict time-based validation with no data leakage, benchmarked against a naive baseline.</li>
+          <li><b>Honesty</b> A negative result reported clearly, which protects the business from a costly wrong bet.</li>
+          <li><b>Business sense</b> Statistical findings turned into three concrete HR actions.</li>
+          <li><b>Scale</b> 22,293 survey responses, 35 items, 9 dimensions, from raw data to recommendation.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- KPI TILES -->
+    <div class="kpis">
+      <div class="kpi reveal"><b data-count="2.24" data-dec="2">0</b><small>RMSE (p.p.) of the best forecaster: the naive baseline</small></div>
+      <div class="kpi reveal"><b data-count="0.70" data-dec="2">0</b><small>Mean R² across dimensions within the same cycle</small></div>
+      <div class="kpi reveal"><b data-count="3">0</b><small>Lever dimensions driving the climate ecosystem</small></div>
+      <div class="kpi reveal"><b data-count="4">0</b><small>Forecasting approaches compared on a strict time split</small></div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dash reveal">
+      <div class="dash-head">
+        <div>
+          <span class="kicker" style="margin-bottom:4px">Interactive dashboard</span>
+          <h3 style="font-size:1.5rem;margin:0">Explore the results</h3>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-tab="forecast" role="tab">Forecast accuracy</button>
+          <button class="tab" data-tab="levers" role="tab">Lever dimensions</button>
+          <button class="tab" data-tab="sample" role="tab">Sample</button>
+        </div>
+      </div>
+
+      <div class="panel active" id="panel-forecast">
+        <div class="panel-grid">
+          <div>
+            <p class="note">RMSE (percentage points) when forecasting the 2024→2025 change in favorability, training on 2023→2024. Lower is better.</p>
+            <div class="bars">
+              <div class="barrow"><div class="top"><span>Naive baseline <em class="win">best</em></span><span>2.24</span></div><div class="track"><div class="fill gold" data-w="48.1"></div></div></div>
+              <div class="barrow"><div class="top"><span>Random Forest</span><span>2.65</span></div><div class="track"><div class="fill" data-w="56.9"></div></div></div>
+              <div class="barrow"><div class="top"><span>Ridge Regression</span><span>3.85</span></div><div class="track"><div class="fill" data-w="82.6"></div></div></div>
+              <div class="barrow"><div class="top"><span>Linear Regression</span><span>4.66</span></div><div class="track"><div class="fill" data-w="100"></div></div></div>
+            </div>
+          </div>
+          <div class="insight">
+            <span class="kicker">Reading the chart</span>
+            <p>Every trained model produced a negative R² and a higher error than simply assuming no change (MAE of the baseline: 1.78 p.p.).</p>
+            <p><b>Why it's still valuable:</b> a rigorous negative result prevents the organisation from investing in a predictive tool that would not outperform a one-line rule.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-levers">
+        <div class="panel-grid">
+          <div>
+            <p class="note">R² of each dimension explained by the other eight, same cycle. The dashed line marks the 0.70 mean.</p>
+            <div class="bars rchart">
+              <div class="ref"><span>mean 0.70</span></div>
+              <div class="barrow"><div class="top"><span>Thriving Individuals <em class="win">lever</em></span><span>0.786</span></div><div class="track"><div class="fill" data-w="78.6"></div></div></div>
+              <div class="barrow"><div class="top"><span>Organisational Agility <em class="win">lever</em></span><span>0.757</span></div><div class="track"><div class="fill" data-w="75.7"></div></div></div>
+              <div class="barrow"><div class="top"><span>Organised Processes <em class="win">lever</em></span><span>0.755</span></div><div class="track"><div class="fill" data-w="75.5"></div></div></div>
+              <div class="barrow"><div class="top"><span>Healthy Environment <em class="aut">autonomous</em></span><span>0.624</span></div><div class="track"><div class="fill gold" data-w="62.4"></div></div></div>
+              <div class="barrow"><div class="top"><span>Fair Rewards <em class="aut">autonomous</em></span><span>0.618</span></div><div class="track"><div class="fill gold" data-w="61.8"></div></div></div>
+            </div>
+          </div>
+          <div class="insight">
+            <span class="kicker">Reading the chart</span>
+            <p><b>Levers (plum):</b> these three also rank as the most important predictors of the other dimensions in the Random Forest, so improving them moves the whole ecosystem.</p>
+            <p><b>Autonomous (gold):</b> pay and well-being are shaped by external factors the survey doesn't fully capture. They need their own, direct interventions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" id="panel-sample">
+        <div class="panel-grid">
+          <div>
+            <p class="note">Valid respondents per annual cycle.</p>
+            <div class="cols">
+              <div class="col"><div class="colbar"><i data-h="96.7"></i></div><b>7,384</b><span>2023</span></div>
+              <div class="col"><div class="colbar"><i data-h="95.2"></i></div><b>7,270</b><span>2024</span></div>
+              <div class="col"><div class="colbar"><i data-h="100"></i></div><b>7,639</b><span>2025</span></div>
+            </div>
+          </div>
+          <div class="insight">
+            <span class="kicker">Reading the chart</span>
+            <p>Large, consistent samples each year (roughly 7,300 to 7,600 respondents out of ~9,000 employees) make the cross-sectional analysis robust.</p>
+            <p>The limitation is the <b>time dimension</b>: three cycles give only two year-over-year transitions, which is why the temporal models struggled.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- METHOD STEPPER -->
+    <h3 class="reveal" style="margin-top:72px">How I approached it</h3>
+    <div class="stepper reveal">
+      <div class="step"><i>1</i><b>Standardise</b><span>35 comparable items across 3 cycles</span></div>
+      <div class="step"><i>2</i><b>Define target</b><span>Favorability = share of scores 4–5; Δ in p.p.</span></div>
+      <div class="step"><i>3</i><b>Model</b><span>Cross-sectional and temporal paths</span></div>
+      <div class="step"><i>4</i><b>Validate</b><span>Strict time split, no look-ahead leakage</span></div>
+      <div class="step"><i>5</i><b>Recommend</b><span>Translate results into HR actions</span></div>
+    </div>
+
+    <details class="more reveal">
+      <summary>Methodology details (for the technically curious)</summary>
+      <div class="grid2" style="margin-top:20px">
+        <div class="card">
+          <span class="kicker">Path A · Cross-sectional</span>
+          <ul>
+            <li>Each of the 9 dimensions modelled as the dependent variable against the other 8 in the same cycle.</li>
+            <li>70% training / 30% test split.</li>
+            <li>Multiple Linear Regression vs. Random Forest, compared via R² and RMSE, plus feature importance.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="kicker">Path B · Longitudinal</span>
+          <ul>
+            <li>Train on Δ 2023→2024, test on Δ 2024→2025.</li>
+            <li>Algorithms: Naive, OLS, Ridge, Random Forest.</li>
+            <li>GridSearchCV with TimeSeriesSplit; evaluated by MAE, RMSE, R² and Pearson correlation against the naive baseline (Δ = 0).</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top:24px">
+        <span class="kicker">Dataset</span>
+        <p style="margin-bottom:12px">Anonymised secondary data from a Climate &amp; Engagement Survey at a Brazilian technology company with roughly 9,000 employees. Five-point Likert scale, consolidated into nine dimensions:</p>
+        <span class="tag">Culture of Integrity</span><span class="tag">Organisational Agility</span><span class="tag">Responsible Leadership</span><span class="tag">Healthy Environment</span><span class="tag">Engagement</span><span class="tag">Organised Processes</span><span class="tag">Fair Rewards</span><span class="tag">Attractive Careers</span><span class="tag">Thriving Individuals</span>
+      </div>
+    </details>
+
+    <!-- RECOMMENDATIONS -->
+    <h3 class="reveal">What the business should do</h3>
+    <div class="grid3">
+      <div class="card rec reveal"><div class="num">01</div><h3 style="font-size:1.3rem">Invest systemically</h3><p>Concentrate on autonomy, ownership and process efficiency (Thriving Individuals, Organised Processes). Gains spill over into leadership, engagement and agility.</p></div>
+      <div class="card rec reveal"><div class="num">02</div><h3 style="font-size:1.3rem">Act directly on pay &amp; well-being</h3><p>Perceptions of compensation, benefits and work-life balance won't improve as a side effect of other initiatives. They need specific interventions.</p></div>
+      <div class="card rec reveal"><div class="num">03</div><h3 style="font-size:1.3rem">Govern people data wisely</h3><p>Avoid adopting predictive AI without a long history of structured data. For short- and medium-term decisions, historical stability is the safest baseline.</p></div>
+    </div>
+
+    <div class="next reveal">
+      <span class="kicker">Proposed next steps</span>
+      <p>Collect additional survey cycles to give the models more transitions, and test whether team- or business-unit-level data improves forecasts beyond the stability baseline.</p>
+    </div>
+    <!-- To link your code, add: <a href="https://github.com/YOUR-USER/YOUR-REPO" class="btn btn-ghost">View notebook on GitHub</a> -->
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="eyebrow reveal">Contact</span>
+    <h2 class="reveal">Let's talk about how data can support your next decision.</h2>
+    <p class="lead reveal">Open to Data Analyst opportunities in Germany and remote roles.</p>
+    <div class="cta reveal">
+      <a href="mailto:luma.m.garcia@gmail.com" class="btn btn-primary">luma.m.garcia@gmail.com</a>
+      <a href="https://www.linkedin.com/in/luma-garcia" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Luma Garcia · Erlangen, Germany</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      e.target.classList.add('show');
+      e.target.querySelectorAll('.fill').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+      io.unobserve(e.target);
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+
+  var co = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || '', start = performance.now(), dur = 1500;
+      (function tick(t){
+        var p = Math.min((t - start)/dur, 1), eased = 1 - Math.pow(1-p, 3);
+        var dec = +el.dataset.dec || 0; el.textContent = (dec ? (target*eased).toFixed(dec) : Math.round(target*eased).toLocaleString('en-US')) + suffix;
+        if(p < 1) requestAnimationFrame(tick);
+      })(start);
+      co.unobserve(el);
+    });
+  }, {threshold:0.6});
+  document.querySelectorAll('[data-count]').forEach(function(el){ co.observe(el); });
+
+  // Dashboard tabs
+  function animatePanel(p){
+    p.querySelectorAll('.fill').forEach(function(b){ b.style.width = '0'; });
+    p.querySelectorAll('.colbar i').forEach(function(b){ b.style.height = '0'; });
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      p.querySelectorAll('.fill').forEach(function(b){ b.style.width = b.dataset.w + '%'; });
+      p.querySelectorAll('.colbar i').forEach(function(b){ b.style.height = b.dataset.h + '%'; });
+    }); });
+  }
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      var p = document.getElementById('panel-' + t.dataset.tab);
+      p.classList.add('active');
+      animatePanel(p);
+    });
+  });
+  var dash = document.querySelector('.dash');
+  if(dash){
+    new IntersectionObserver(function(es, ob){
+      es.forEach(function(e){ if(e.isIntersecting){ animatePanel(document.querySelector('.panel.active')); ob.disconnect(); } });
+    }, {threshold:0.25}).observe(dash);
+  }
+</script>
+</body>
+</html>
