@@ -321,7 +321,7 @@
         <h3>Can climate survey results predict where climate is heading?</h3>
         <p style="margin-bottom:14px">An MBA final project (USP) analysing three annual climate and engagement surveys (22,293 responses, 9 dimensions). It tests how the dimensions relate to each other and whether models can forecast the next change. Main finding: no model beat the simple “no change” baseline. Aimed at People Analytics and HR audiences.</p>
         <span class="tag soft">Python</span><span class="tag soft">Scikit-Learn</span><span class="tag soft">Random Forest</span><span class="tag soft">Regression</span>
-        <div class="cta" style="margin-top:18px"><a href="#project" class="btn btn-primary">Open Project 1</a><a href="assets/mba-final-paper-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Paper (PDF, Portuguese)</a></div>
+        <div class="cta" style="margin-top:18px"><a href="#project" class="btn btn-primary">Open Project 1</a></div>
       </div>
       <div class="card reveal">
         <span class="kicker">Project 2 · AI-powered solution (concept and MVP)</span>
@@ -708,10 +708,6 @@
       <span class="kicker">Next steps</span>
       <p>Add further survey cycles, keep item identifiers comparable, use stable aggregated organisational units where privacy allows, validate over multiple time windows, and use longitudinal designs or quasi-experiments before drawing causal conclusions.</p>
     </div>
-    <div class="cta reveal" style="margin-top:26px">
-      <a href="assets/mba-final-paper-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Full paper (PDF, in Portuguese)</a>
-      <a href="assets/mba-defense-slides-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Defence slides (PDF, in Portuguese)</a>
-    </div>
     <div class="next reveal" style="margin-top:44px">
       <span class="kicker">And after the insight?</span>
       <p>Knowing what the data can and cannot say is the first step. The second is turning it into reviewed action plans.</p>
@@ -948,7 +944,7 @@ ${l.map(a=>{const d=dm(a.dim),t=a.target==null?+(d[4]+2).toFixed(1):a.target;ret
 <div class="card"><span class="kicker">Remaining development opportunities</span><ul class="l">${rem.map(d=>`<li>${d[1]}: ${d[4]}% in 2025 (no linked action)</li>`).join('')}</ul></div>`};
 const setT=(id,v)=>{A.find(a=>a.id==id).target=Math.min(100,+v);save();render()};
 V.responsible=()=>`<span class="eyebrow">Responsible AI and methodology</span><h2>Principles</h2><div class="grid">${[['Aggregated only','No identifiable employee data and no individual ranking. This MVP shows organisation-wide aggregates (7,270 to 7,639 valid responses per cycle).'],['Minimum group size','Any future cut must show a warning below a minimum group size set by the organisation’s privacy policy. Business units are excluded here for that reason.'],['Transparent evidence','Each statement cites its source analysis and is labelled verified data, statistical result, interpretation, hypothesis or recommendation.'],['Human review','AI drafts are proposals. The leader edits and submits; a consultant reviews and approves. Every change is logged in an audit trail.'],['Stated limits','Associations are not causes. Three cycles from one organisation are exploratory.'],['No sensitive inference','The tool does not infer personal traits, performance or intent of individuals.']].map(p=>`<div class="card"><h3 style="margin-top:0">${p[0]}</h3><p class="note">${p[1]}</p></div>`).join('')}</div>
-<div class="card"><span class="kicker">Data and transformations</span><ul class="l"><li>All numbers are copied unchanged from the featured project page (favorability, Δ, R², correlations, predictors, sample sizes). No individual-level records exist here.</li><li>Synthetic values appear only in Impact tracking, behind a clearly labelled toggle.</li><li>The AI is a deterministic demo mode. A live LLM would require a server-side proxy holding the API key.</li><li><a class="link" href="../#project">Original analysis and methodology →</a></li></ul></div>`;
+<div class="card"><span class="kicker">Data and transformations</span><ul class="l"><li>All numbers are copied unchanged from the featured project page (favorability, Δ, R², correlations, predictors, sample sizes). No individual-level records exist here.</li><li>Synthetic values appear only in Impact tracking, behind a clearly labelled toggle.</li><li>The AI is a deterministic demo mode. A live LLM would require a server-side proxy holding the API key.</li><li><a class="link" href="#project">Original analysis and methodology →</a></li></ul></div>`;
 const NAV=[['overview','Overview'],['diagnosis','Diagnosis'],['ai','AI Insights'],['planner','Action Planner'],['impact','Impact'],['responsible','Responsible AI']];
 function go(v){S.v=v;render();$('#cta').scrollIntoView()}
 function render(){$('#tabs').innerHTML=tabsHtml();$('#app').innerHTML=V[S.v]();
