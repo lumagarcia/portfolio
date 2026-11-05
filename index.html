@@ -275,8 +275,8 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
-      <a href="#project">Project 1</a>
-      <a href="#project2">Project 2</a>
+      <a href="#project">Project 1 · Analysis</a>
+      <a href="#project2">Project 2 · AI solution</a>
     </div>
     <a href="#contact" class="btn btn-primary">Contact</a>
   </nav>
@@ -292,8 +292,8 @@
         <div class="role">People Analytics · Data Science &amp; AI</div>
         <p class="lead">I'm Luma, a People Analytics professional with 10 years of experience across HR, data analytics and data-driven decision-making. I combine organisational psychology with Python, SQL and machine learning, from survey analytics to GenAI-enabled reporting.</p>
         <div class="cta">
-          <a href="#project" class="btn btn-primary">View featured project</a>
-          <a href="#project2" class="btn btn-ghost">Climate to Action</a>
+          <a href="#project" class="btn btn-primary">Project 1 · Climate survey analysis</a>
+          <a href="#project2" class="btn btn-ghost">Project 2 · AI action planner</a>
           <a href="#contact" class="btn btn-ghost">Get in touch</a>
         </div>
         <p class="meta">Based in Erlangen, Germany<br />Open to on-site roles in the Erlangen–Nuremberg area and remote roles across Germany<br />English C1 · German B1</p>
@@ -305,6 +305,31 @@
       <div class="stat"><b>3 → 1</b><span>Months: reporting cycle, via a GenAI-enabled workflow</span></div>
       <div class="stat"><b>50 → 70%</b><span>Survey participation, through data-driven initiatives</span></div>
       <div class="stat"><b data-count="100" data-suffix="+">0</b><span>International HR stakeholders on self-service dashboards</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS SUMMARY -->
+<section id="projects" style="padding:72px 0;border-top:1px solid var(--line)">
+  <div class="wrap">
+    <span class="eyebrow reveal">Two projects, one story</span>
+    <h2 class="reveal" style="max-width:860px">From analysis to action</h2>
+    <p class="lead reveal">Project 1 asks what climate survey data can and cannot tell us. Project 2 asks what to do with it, with people in charge of every decision.</p>
+    <div class="grid2" style="margin-top:36px">
+      <div class="card reveal">
+        <span class="kicker">Project 1 · Data analysis</span>
+        <h3>Can climate survey results predict where climate is heading?</h3>
+        <p style="margin-bottom:14px">An MBA final project (USP) analysing three annual climate and engagement surveys (22,293 responses, 9 dimensions). It tests how the dimensions relate to each other and whether models can forecast the next change. Main finding: no model beat the simple “no change” baseline. Aimed at People Analytics and HR audiences.</p>
+        <span class="tag soft">Python</span><span class="tag soft">Scikit-Learn</span><span class="tag soft">Random Forest</span><span class="tag soft">Regression</span>
+        <div class="cta" style="margin-top:18px"><a href="#project" class="btn btn-primary">Open Project 1</a><a href="assets/mba-final-paper-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Paper (PDF, Portuguese)</a></div>
+      </div>
+      <div class="card reveal">
+        <span class="kicker">Project 2 · AI-powered solution (concept and MVP)</span>
+        <h3>Climate to Action</h3>
+        <p style="margin-bottom:14px">A digital solution that takes the Project 1 results to action. Leaders explore their results and get AI-drafted action plans. Consultants and HR business partners review them, add tips and approve. Every step is traceable, with an audit trail and an evidence check against the source analysis. An independent concept; the AI runs in demo mode.</p>
+        <span class="tag soft">Leaders</span><span class="tag soft">Consultants &amp; HR business partners</span><span class="tag soft">Human review</span><span class="tag soft">Audit trail</span>
+        <div class="cta" style="margin-top:18px"><a href="#project2" class="btn btn-primary">Open Project 2</a><button class="btn btn-ghost" style="cursor:pointer;font-family:var(--sans)" onclick="demo(0)">Start guided demo</button></div>
+      </div>
     </div>
   </div>
 </section>
@@ -442,6 +467,13 @@
       <div class="kpi reveal"><b>0.09–0.13</b><small>Correlation between model forecasts and observed changes</small></div>
     </div>
 
+    <h3 class="reveal" style="margin-top:56px">Two questions, kept separate</h3>
+    <div class="grid2 reveal">
+      <div class="card"><span class="kicker">1 · Same-cycle estimation</span><h3 style="font-size:1.25rem">Can a survey dimension be estimated from the others?</h3><p>Yes, to a large extent: mean R² of 0.70 within the same cycle. The dimensions share a lot of variance.</p></div>
+      <div class="card"><span class="kicker">2 · Forecasting the next change</span><h3 style="font-size:1.25rem">Can models predict next year's change?</h3><p>Not better than assuming no change: no model beat the naive baseline (RMSE 2.24 p.p.).</p></div>
+    </div>
+    <p class="reveal" style="font-family:var(--serif);font-size:1.55rem;color:var(--accent);margin-top:22px;font-style:italic">Algorithmic complexity does not replace sufficient time history.</p>
+
     <!-- DASHBOARD -->
     <div class="dash reveal">
       <div class="dash-head">
@@ -468,6 +500,15 @@
               <div class="barrow"><div class="top"><span>Ridge Regression</span><span>RMSE 3.85 · MAE 3.41</span></div><div class="track"><div class="fill" data-w="82.6"></div></div></div>
               <div class="barrow"><div class="top"><span>Linear Regression</span><span>RMSE 4.66 · MAE 4.24</span></div><div class="track"><div class="fill" data-w="100"></div></div></div>
             </div>
+            <div class="scroll" style="margin-top:26px"><table class="ftable">
+              <thead><tr><th>Model</th><th>MAE</th><th>RMSE</th><th>R²</th><th>Correlation</th></tr></thead>
+              <tbody>
+                <tr class="hi"><td>Naive baseline</td><td class="d">1.78</td><td class="d">2.24</td><td class="d">−0.608</td><td class="d">—</td></tr>
+                <tr><td>Random Forest</td><td>2.27</td><td>2.65</td><td>−1.259</td><td>0.105</td></tr>
+                <tr><td>Ridge Regression</td><td>3.41</td><td>3.85</td><td>−3.770</td><td>0.093</td></tr>
+                <tr><td>Linear Regression</td><td>4.24</td><td>4.66</td><td>−5.977</td><td>0.130</td></tr>
+              </tbody>
+            </table></div>
           </div>
           <div class="insight">
             <span class="kicker">Reading the chart</span>
@@ -497,7 +538,7 @@
           </div>
           <div class="insight">
             <span class="kicker">Reading the chart</span>
-            <p><b>Levers (plum):</b> these three are best explained by the rest of the survey and also recur among the top Random Forest predictors for most other dimensions. They sit at the centre of the structure.</p>
+            <p><b>Levers (plum):</b> these three are best explained by the rest of the survey (highest R²) and also recur among the top-3 Random Forest predictors of other dimensions. Counting the nine top-3 lists, Thriving Individuals appears for 7 of the other 8 dimensions, Engagement for 5 (but it is less well explained, R² 0.691), and Organised Processes and Organisational Agility for 4 each. Read “lever” as a prediction pattern, not as proven influence.</p>
             <p><b>Autonomous (gold):</b> pay and well-being are less explained by the other dimensions, suggesting external factors the survey does not capture. They are unlikely to improve as a by-product of other initiatives.</p>
             <p>Linear Regression and Random Forest performed almost identically (mean R² 0.697 vs 0.693), which points to a largely linear shared structure.</p>
           </div>
@@ -638,7 +679,7 @@
       <div class="card" style="margin-top:24px">
         <span class="kicker">Survey dimensions</span>
         <p style="margin-bottom:12px">Climate &amp; Engagement Survey of a Brazilian technology company with roughly 9,000 employees (anonymised secondary data, five-point Likert scale):</p>
-        <span class="tag">Culture of Integrity</span><span class="tag">Organisational Agility</span><span class="tag">Responsible Leadership</span><span class="tag">Healthy Environment</span><span class="tag">Engagement</span><span class="tag">Organised Processes</span><span class="tag">Fair Rewards</span><span class="tag">Attractive Careers</span><span class="tag">Thriving Individuals</span>
+        <span class="tag">Culture of Integrity</span><span class="tag">Organisational Agility</span><span class="tag">Responsible Leadership</span><span class="tag">Healthy Environment</span><span class="tag">Engagement</span><span class="tag">Organised Processes</span><span class="tag">Fair Rewards</span><span class="tag">Attractive Careers</span><span class="tag">Thriving Individuals</span><div class="scroll" style="margin-top:14px"><table class="mini"><thead><tr><th>Dimension</th><th>What it covers</th></tr></thead><tbody><tr><td>Culture of Integrity</td><td>Ethical culture, safe environment, social responsibility and diversity.</td></tr><tr><td>Organisational Agility</td><td>Innovation, collaboration, adaptability and customer focus.</td></tr><tr><td>Responsible Leadership</td><td>Trust in leadership, management practices and strategic alignment.</td></tr><tr><td>Healthy Environment</td><td>Psychological safety, balance and sense of belonging.</td></tr><tr><td>Engagement</td><td>Pride in belonging, motivation and willingness to go the extra mile.</td></tr><tr><td>Organised Processes</td><td>Structure, operational efficiency and access to information.</td></tr><tr><td>Fair Rewards</td><td>Pay, benefits, equity and performance management.</td></tr><tr><td>Attractive Careers</td><td>Development, learning and growth opportunities.</td></tr><tr><td>Thriving Individuals</td><td>Autonomy, ownership, authenticity and ability to propose improvements.</td></tr></tbody></table></div>
       </div>
     </details>
 
@@ -660,14 +701,22 @@
     <div class="grid3">
       <div class="card rec reveal"><div class="num">01</div><h3 style="font-size:1.3rem">Focus on the central dimensions</h3><p>Autonomy, ownership, process efficiency and adaptability (Thriving Individuals, Organised Processes, Organisational Agility) are the most connected parts of the survey. Treat them as priorities and test the effect through pilots, since the data cannot prove causation.</p></div>
       <div class="card rec reveal"><div class="num">02</div><h3 style="font-size:1.3rem">Treat pay &amp; well-being on their own</h3><p>Fair Rewards and Healthy Environment are the least explained by other dimensions. Don't expect them to improve as a side effect; they need direct, specific interventions.</p></div>
-      <div class="card rec reveal"><div class="num">03</div><h3 style="font-size:1.3rem">Don't buy predictive AI yet</h3><p>For short- and medium-term decisions, last year's result is the safest baseline. Complex models should only be adopted once they beat it on a longer history.</p></div>
+      <div class="card rec reveal"><div class="num">03</div><h3 style="font-size:1.3rem">Make last year's result the bar to beat</h3><p>In this data no model beat last year's result, so use it as the baseline. This does not rule out machine learning: adopt more complex models once they beat that bar consistently over a longer history.</p></div>
     </div>
 
     <div class="next reveal">
       <span class="kicker">Next steps</span>
       <p>Add further survey cycles, keep item identifiers comparable, use stable aggregated organisational units where privacy allows, validate over multiple time windows, and use longitudinal designs or quasi-experiments before drawing causal conclusions.</p>
     </div>
-    <!-- To link your code or paper, add: <a href="https://github.com/YOUR-USER/YOUR-REPO" class="btn btn-ghost">View notebook on GitHub</a> -->
+    <div class="cta reveal" style="margin-top:26px">
+      <a href="assets/mba-final-paper-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Full paper (PDF, in Portuguese)</a>
+      <a href="assets/mba-defense-slides-pt.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Defence slides (PDF, in Portuguese)</a>
+    </div>
+    <div class="next reveal" style="margin-top:44px">
+      <span class="kicker">And after the insight?</span>
+      <p>Knowing what the data can and cannot say is the first step. The second is turning it into reviewed action plans.</p>
+      <a href="#project2" class="btn btn-primary" style="margin-top:14px">See Project 2: Climate to Action</a>
+    </div>
   </div>
 </section>
 
@@ -676,7 +725,7 @@
   <div class="wrap">
     <span class="eyebrow reveal">Project 2 · Independent product concept and functional MVP</span>
     <h2 class="reveal" style="max-width:900px">Climate to Action: from survey results to reviewed action plans</h2>
-    <p class="lead reveal">Project 1 asks what survey data can and cannot predict. Project 2 asks what happens next: leaders see the results, an AI drafts action plans, and a consultant reviews them before anything becomes official. It is built on the Project 1 data. The AI runs in demo mode with pre-written, labelled answers. <a href="#project" class="link" style="border-bottom:1px dotted var(--gold)">See Project 1</a></p>
+    <p class="lead reveal">Project 1 asks what survey data can and cannot predict. Project 2 asks what happens next: leaders see the results, an AI drafts action plans, and a consultant reviews them before anything becomes official. It is built on the Project 1 data. The AI runs in demo mode with pre-written, labelled answers. <a href="#project" class="link" style="border-bottom:1px dotted var(--gold)">See Project 1: survey analysis</a></p>
     <div class="cta reveal"><button class="btn btn-primary" onclick="demo(0)">Start guided demo</button></div>
     <div id="cta" style="margin-top:36px"><div id="tabs"></div><div id="app"></div></div>
   </div>
@@ -853,7 +902,7 @@ return `<span class="eyebrow">Climate to Action · Independent product concept</
 <div class="card kpi"><b>${gn?fm(gn.dl):'n/a'}</b><small>${gn?'Biggest year-over-year gain (p.p.): '+gn.d[1]:'Baseline cycle: no earlier cycle to compare'}</small></div></div>
 <div class="card"><span class="kicker">Favorability by dimension, ${S.y}</span><div class="bars">${rows.map(r=>bar(`<span class="link" onclick="S.d='${r.d[0]}';go('diagnosis')">${r.d[1]}</span>${r.d[6]=='lever'?'<em class="p">lever</em>':r.d[6]?'<em class="p a">autonomous</em>':''}`,r.v.toFixed(1)+'%'+(r.dl==null?'':' · Δ '+fm(r.dl)+' p.p.'),r.v,r.d[6]=='autonomous'?'gold':r.d[6]?'':'light')).join('')}</div>
 <p class="note">Select a dimension name to open its diagnosis. Δ = year-over-year change in percentage points, as reported in the original analysis.</p></div>
-<div class="card"><span class="kicker">Definitions and sources</span><ul class="l"><li><b>Favorability:</b> share of answers 4–5 among substantive responses (code 6 excluded). Five-point Likert scale, 9 dimensions, 35 comparable items.</li><li><b>Lever / autonomous:</b> classification from the original analysis based on how well other dimensions explain each one (within-cycle R²).</li><li><b>Source:</b> featured project in the portfolio (Climate &amp; Engagement Survey, ~9,000 employees, anonymised secondary data). Not available, so not shown: business-unit cuts and post-2025 data.</li></ul></div>`};
+<div class="card"><span class="kicker">Definitions and sources</span><ul class="l"><li><b>Favorability:</b> share of answers 4–5 among substantive responses (code 6 excluded). Five-point Likert scale, 9 dimensions, 35 comparable items.</li><li><b>Lever / autonomous:</b> classification from the original analysis: how well other dimensions explain each one (within-cycle R²) and how often it recurs among top predictors.</li><li><b>Source:</b> featured project in the portfolio (Climate &amp; Engagement Survey, ~9,000 employees, anonymised secondary data). Not available, so not shown: business-unit cuts and post-2025 data.</li></ul></div>`};
 V.diagnosis=()=>{const d=dm(S.d),r=d[6],ps=d[7].map(p=>dm(p[0])[1]+' '+p[1]+'%').join(' · ');
 const it=r=='lever'?`Statistically central: well explained by the rest of the survey (R² ${d[5]}) and it recurs among predictors of other dimensions. Hypothesis: movement here tends to go with movement elsewhere. Test through pilots.`:r?`Less explained by other dimensions (R² ${d[5]}), suggesting factors the survey does not capture. It is unlikely to improve as a by-product of other initiatives and probably needs direct, specific interventions.`:`Moderately explained by the other dimensions (R² ${d[5]}); neither a lever nor autonomous in the original classification.`;
 return `<span class="eyebrow">Organisational diagnosis</span><h2>${d[1]}</h2><div class="row">${D.map(x=>`<button class="ctab ${x[0]==S.d?'active':''}" onclick="S.d='${x[0]}';render()">${x[1]}</button>`).join('')}</div>
