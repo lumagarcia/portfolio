@@ -18,7 +18,7 @@
 <style>
   :root{
     --bg:#faf7f3; --bg2:#f3ede6; --card:#ffffff; --ink:#2a2430; --muted:#6d6573; --line:#e6ddd3;
-    --accent:#6a3b52; --accent-soft:#ead9df; --gold:#b08a57;
+     --accent:#6a3b52; --accent-soft:#ead9df; --gold:#73552f;
     --serif:'Cormorant Garamond',Georgia,serif; --sans:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -129,7 +129,7 @@
   .insight p b{color:var(--ink);font-weight:500}
   em.win,em.aut{font-style:normal;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:99px;margin-left:6px;font-weight:600}
   em.win{background:var(--accent-soft);color:var(--accent)}
-  em.aut{background:#f1e6d2;color:#8a6a3a}
+  em.aut{background:#f1e6d2;color:#6a4d2c}
   .rchart{position:relative;padding-top:14px}
   .rchart .ref{position:absolute;left:70%;top:-6px;bottom:-6px;border-left:1.5px dashed var(--gold);pointer-events:none;z-index:2}
   .rchart .ref span{position:absolute;top:-18px;left:6px;font-size:.66rem;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
@@ -147,7 +147,7 @@
   .ftable td{padding:9px 8px;border-top:1px solid var(--line);text-align:right;color:var(--muted)}
   .ftable td:first-child{color:var(--ink)}
   .ftable td.d{font-weight:600}
-  .ftable td.up{color:var(--accent)} .ftable td.dn{color:#a0782f} .ftable td.fl{color:var(--muted);font-weight:400}
+  .ftable td.up{color:var(--accent)} .ftable td.dn{color:#6a4d2c} .ftable td.fl{color:var(--muted);font-weight:400}
   .ftable tr.hi td.d{background:var(--accent-soft)}
   .scroll{overflow-x:auto}
   .heat{display:grid;grid-template-columns:38px repeat(9,minmax(34px,1fr));gap:3px;min-width:420px}
@@ -232,15 +232,15 @@
 #cta .fill.light{background:#b794a6}
 #cta .link{cursor:pointer;border-bottom:1px dotted var(--gold)}
 #cta em.p{font-style:normal;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:99px;margin-left:6px;font-weight:600;background:var(--accent-soft);color:var(--accent)}
-#cta em.p.a{background:#f1e6d2;color:#8a6a3a}
+#cta em.p.a{background:#f1e6d2;color:#6a4d2c}
 #cta .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:14px 0}
 #cta .insight{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
 #cta .insight p{font-size:.92rem;color:var(--ink)}
 #cta .t{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:2px 9px;border-radius:99px;margin-left:8px;border:1px solid var(--line);color:var(--muted);vertical-align:middle}
 #cta .t.V,#cta .t.S{background:var(--accent-soft);color:var(--accent);border:0}
-#cta .t.H{background:#f1e6d2;color:#8a6a3a;border:0}
+#cta .t.H{background:#f1e6d2;color:#6a4d2c;border:0}
 #cta .t.R{background:var(--accent);color:#fff;border:0}
-#cta .syn{border:1px dashed var(--gold);border-radius:12px;padding:10px 14px;font-size:.8rem;color:#8a6a3a;margin-top:12px}
+#cta .syn{border:1px dashed var(--gold);border-radius:12px;padding:10px 14px;font-size:.8rem;color:#6a4d2c;margin-top:12px}
 #cta select,#cta input,#cta textarea{font:400 .88rem var(--sans);padding:8px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
 #cta select{width:auto}
 #cta label{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin:10px 0 3px}
@@ -263,6 +263,18 @@
 #cta{scroll-margin-top:84px}#cta details summary{cursor:pointer;font-size:.85rem;margin:8px 0}#cta s{opacity:.6}
 #demo .btn{border:1px solid #fff;background:transparent;color:#fff;cursor:pointer;padding:8px 20px;font:500 .85rem var(--sans)}#demo .btn.w{background:#fff;color:var(--accent)}
 #project2 .cta .btn{cursor:pointer;font-family:var(--sans)}
+  body.demo-open{padding-bottom:140px}
+  .priority-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .priority-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .priority-card h4{font-family:var(--serif);font-size:1.3rem;color:var(--accent);margin:0 0 10px}
+  .priority-card p{font-size:.88rem;color:var(--muted);margin:7px 0}
+  .priority-card p b{color:var(--ink);font-weight:600}
+  .priority-dimensions{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+  .priority-dimension{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:5px 7px 5px 11px;font-size:.78rem;color:var(--ink)}
+  .priority-dimension button{border:0;border-radius:999px;background:var(--accent);color:#fff;padding:5px 9px;font:500 .72rem var(--sans);cursor:pointer}
+  .priority-rule{margin-top:16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg);font-size:.82rem;color:var(--muted)}
+  .sim-notice{margin:0 0 12px;padding:10px 14px;border:1px dashed var(--gold);border-radius:10px;color:var(--muted);font-size:.8rem}
+  @media(max-width:700px){.priority-grid{grid-template-columns:1fr}body.demo-open{padding-bottom:220px}}
 </style>
 </head>
 <body>
@@ -462,14 +474,14 @@
 
     <div class="kpis">
       <div class="kpi reveal"><b data-count="22293">0</b><small>Valid survey responses analysed across three annual cycles</small></div>
-      <div class="kpi reveal"><b data-count="0.70" data-dec="2">0</b><small>Mean R² between dimensions within the same cycle</small></div>
-      <div class="kpi reveal"><b data-count="2.24" data-dec="2">0</b><small>RMSE (p.p.) of the best forecaster: the naive baseline</small></div>
-      <div class="kpi reveal"><b>0.09–0.13</b><small>Correlation between model forecasts and observed changes</small></div>
+      <div class="kpi reveal"><b data-count="80.2" data-dec="1" data-suffix="%">0</b><small>Lowest 2025 favorability: Organisational Agility</small></div>
+      <div class="kpi reveal"><b data-count="2.8" data-dec="1" data-prefix="+" data-suffix=" p.p.">0</b><small>Largest 2024–2025 gain: Fair Rewards; a signal to sustain and monitor</small></div>
+      <div class="kpi reveal"><b data-count="2.24" data-dec="2" data-suffix=" p.p.">0</b><small>Error score for the no-change forecast; no complex model improved on this benchmark</small></div>
     </div>
 
     <h3 class="reveal" style="margin-top:56px">Two questions, kept separate</h3>
     <div class="grid2 reveal">
-      <div class="card"><span class="kicker">1 · Same-cycle estimation</span><h3 style="font-size:1.25rem">Can a survey dimension be estimated from the others?</h3><p>Yes, to a large extent: mean R² of 0.70 within the same cycle. The dimensions share a lot of variance.</p></div>
+      <div class="card"><span class="kicker">1 · Same-cycle estimation</span><h3 style="font-size:1.25rem">Can a survey dimension be estimated from the others?</h3><p>Yes, to a large extent: mean R² of 0.70 within the same cycle, meaning the other dimensions statistically account for about 70% of score variation. This describes a pattern in the survey, not cause and effect.</p></div>
       <div class="card"><span class="kicker">2 · Forecasting the next change</span><h3 style="font-size:1.25rem">Can models predict next year's change?</h3><p>Not better than assuming no change: no model beat the naive baseline (RMSE 2.24 p.p.).</p></div>
     </div>
     <p class="reveal" style="font-family:var(--serif);font-size:1.55rem;color:var(--accent);margin-top:22px;font-style:italic">Algorithmic complexity does not replace sufficient time history.</p>
@@ -482,7 +494,8 @@
           <h3 style="font-size:1.5rem;margin:0">Explore the results</h3>
         </div>
         <div class="tabs" role="tablist">
-          <button class="tab active" data-tab="forecast" role="tab">Forecast accuracy</button>
+          <button class="tab active" data-tab="priority" role="tab">Where to focus</button>
+          <button class="tab" data-tab="forecast" role="tab">Forecast test</button>
           <button class="tab" data-tab="levers" role="tab">Dimension drivers</button>
           <button class="tab" data-tab="trends" role="tab">Favorability trends</button>
           <button class="tab" data-tab="corr" role="tab">Correlations</button>
@@ -490,10 +503,16 @@
         </div>
       </div>
 
-      <div class="panel active" id="panel-forecast">
+      <div class="panel active" id="panel-priority">
+        <p class="note">A decision view using 2025 favorability and how strongly dimensions are statistically connected. The groups are a prioritisation aid, not proof that one action will cause another result.</p>
+        <div id="priority-content" class="priority-grid" aria-live="polite"></div>
+        <div class="priority-rule"><b>Grouping rule:</b> “Lower favourability” means below 86%; “more connected” means R² at or above 0.75. These are cutoffs to organise this sample, not external benchmarks. R² describes statistical connectedness, not cause and effect. Test each proposed action in a pilot before scaling.</div>
+      </div>
+
+      <div class="panel" id="panel-forecast">
         <div class="panel-grid">
           <div>
-            <p class="note">Error when forecasting the 2024→2025 change in item favorability, with models trained on 2023→2024. Bars show RMSE in percentage points; lower is better.</p>
+            <p class="note"><b>What this test means:</b> it compares predictions for 2024→2025 with what actually happened, using 2023→2024 to train. MAE is the average miss; RMSE is an error score that gives larger misses more weight. Both are in percentage points, and lower is better. The no-change benchmark assumes the survey stays at its previous level.</p>
             <div class="bars">
               <div class="barrow"><div class="top"><span>Naive baseline <em class="win">best</em></span><span>RMSE 2.24 · MAE 1.78</span></div><div class="track"><div class="fill gold" data-w="48.1"></div></div></div>
               <div class="barrow"><div class="top"><span>Random Forest</span><span>RMSE 2.65 · MAE 2.27</span></div><div class="track"><div class="fill" data-w="56.9"></div></div></div>
@@ -512,7 +531,7 @@
           </div>
           <div class="insight">
             <span class="kicker">Reading the chart</span>
-            <p>No model beat the stability rule. R² was negative for every model, including the naive one, and forecast-to-actual correlations were low (0.09–0.13).</p>
+            <p>No model beat the stability rule. The no-change forecast had the lowest error score (RMSE 2.24 p.p.). Negative R² means the model did worse than predicting the test-period average; correlations of 0.09–0.13 show the predicted changes aligned only weakly with the observed changes.</p>
             <p><b>Why the models struggled:</b> the average item change was −0.45 p.p. in the training period and +1.38 p.p. in the test period, so the models learned a flat-to-falling year and were tested on a rising one. With one training and one test transition, this is a description, not proof.</p>
             <p><b>Second check:</b> forecasting the 2025 favorability level, the naive rule (RMSE 1.75 p.p.) again beat a linear trend (2.30 p.p.).</p>
           </div>
@@ -522,24 +541,15 @@
       <div class="panel" id="panel-levers">
         <div class="panel-grid">
           <div>
-            <p class="note">R² (linear regression, mean of three cycles) of each dimension explained by the other eight in the same cycle. Dashed line: overall mean of 0.70.</p>
-            <div class="bars tight rchart">
+            <p class="note">Connectedness of each dimension in the same survey cycle. R² 0.79 means the other eight dimensions statistically account for about 79% of the variation in that dimension; it is not evidence of cause and effect.</p>
+            <div class="bars tight rchart" id="driver-bars">
               <div class="ref"><span>mean 0.70</span></div>
-              <div class="barrow"><div class="top"><span>Thriving Individuals <em class="win">lever</em></span><span>0.786 · RF 0.779</span></div><div class="track"><div class="fill" data-w="78.6"></div></div></div>
-              <div class="barrow"><div class="top"><span>Organisational Agility <em class="win">lever</em></span><span>0.757 · RF 0.764</span></div><div class="track"><div class="fill" data-w="75.7"></div></div></div>
-              <div class="barrow"><div class="top"><span>Organised Processes <em class="win">lever</em></span><span>0.755 · RF 0.740</span></div><div class="track"><div class="fill" data-w="75.5"></div></div></div>
-              <div class="barrow"><div class="top"><span>Responsible Leadership</span><span>0.692 · RF 0.683</span></div><div class="track"><div class="fill light" data-w="69.2"></div></div></div>
-              <div class="barrow"><div class="top"><span>Engagement</span><span>0.691 · RF 0.692</span></div><div class="track"><div class="fill light" data-w="69.1"></div></div></div>
-              <div class="barrow"><div class="top"><span>Attractive Careers</span><span>0.683 · RF 0.666</span></div><div class="track"><div class="fill light" data-w="68.3"></div></div></div>
-              <div class="barrow"><div class="top"><span>Culture of Integrity</span><span>0.672 · RF 0.682</span></div><div class="track"><div class="fill light" data-w="67.2"></div></div></div>
-              <div class="barrow"><div class="top"><span>Healthy Environment <em class="aut">autonomous</em></span><span>0.624 · RF 0.613</span></div><div class="track"><div class="fill gold" data-w="62.4"></div></div></div>
-              <div class="barrow"><div class="top"><span>Fair Rewards <em class="aut">autonomous</em></span><span>0.618 · RF 0.617</span></div><div class="track"><div class="fill gold" data-w="61.8"></div></div></div>
             </div>
           </div>
           <div class="insight">
             <span class="kicker">Reading the chart</span>
-            <p><b>Levers (plum):</b> these three are best explained by the rest of the survey (highest R²) and also recur among the top-3 Random Forest predictors of other dimensions. Counting the nine top-3 lists, Thriving Individuals appears for 7 of the other 8 dimensions, Engagement for 5 (but it is less well explained, R² 0.691), and Organised Processes and Organisational Agility for 4 each. Read “lever” as a prediction pattern, not as proven influence.</p>
-            <p><b>Autonomous (gold):</b> pay and well-being are less explained by the other dimensions, suggesting external factors the survey does not capture. They are unlikely to improve as a by-product of other initiatives.</p>
+            <p><b>Most connected:</b> Thriving Individuals, Organisational Agility and Organised Processes show the strongest statistical links to the other dimensions. Treat these as areas to test together, not proven causes.</p>
+            <p><b>Less connected:</b> Fair Rewards and Healthy Environment are less explained by the other dimensions. Give them direct attention instead of assuming they will improve as a side effect of another initiative.</p>
             <p>Linear Regression and Random Forest performed almost identically (mean R² 0.697 vs 0.693), which points to a largely linear shared structure.</p>
           </div>
         </div>
@@ -551,17 +561,7 @@
             <p class="note">Favorability (share of answers 4–5) by dimension and annual cycle, with year-over-year change in percentage points.</p>
             <table class="ftable">
               <thead><tr><th>Dimension</th><th>2023</th><th>2024</th><th>2025</th><th>Δ 23→24</th><th>Δ 24→25</th></tr></thead>
-              <tbody>
-                <tr><td>Culture of Integrity</td><td>91.9%</td><td>90.5%</td><td>91.7%</td><td class="d dn">−1.4</td><td class="d up">+1.2</td></tr>
-                <tr><td>Organisational Agility</td><td>79.0%</td><td>78.3%</td><td>80.2%</td><td class="d dn">−0.8</td><td class="d up">+1.9</td></tr>
-                <tr><td>Responsible Leadership</td><td>86.4%</td><td>86.2%</td><td>86.3%</td><td class="d dn">−0.2</td><td class="d fl">+0.0</td></tr>
-                <tr><td>Healthy Environment</td><td>87.9%</td><td>85.9%</td><td>85.8%</td><td class="d dn">−2.0</td><td class="d fl">+0.0</td></tr>
-                <tr><td>Engagement</td><td>90.2%</td><td>89.3%</td><td>90.6%</td><td class="d dn">−0.8</td><td class="d up">+1.2</td></tr>
-                <tr class="hi"><td>Organised Processes</td><td>83.2%</td><td>82.9%</td><td>85.5%</td><td class="d dn">−0.3</td><td class="d up">+2.6</td></tr>
-                <tr class="hi"><td>Fair Rewards</td><td>82.9%</td><td>82.7%</td><td>85.6%</td><td class="d dn">−0.2</td><td class="d up">+2.8</td></tr>
-                <tr><td>Attractive Careers</td><td>90.1%</td><td>90.9%</td><td>91.2%</td><td class="d up">+0.8</td><td class="d fl">+0.2</td></tr>
-                <tr class="hi"><td>Thriving Individuals</td><td>85.2%</td><td>85.0%</td><td>87.4%</td><td class="d dn">−0.3</td><td class="d up">+2.5</td></tr>
-              </tbody>
+              <tbody id="trend-rows"></tbody>
             </table>
           </div>
           <div class="insight">
@@ -582,7 +582,7 @@
           </div>
           <div class="insight">
             <span class="kicker">Reading the heatmap</span>
-            <p><b>Strongest links:</b> Agility–Processes (0.82), Agility–Thriving Individuals (0.80) and Engagement–Thriving Individuals (0.80).</p>
+            <p><b>Strongest links:</b> Agility–Processes (0.82), Agility–Thriving Individuals (0.80) and Engagement–Thriving Individuals (0.80). A correlation of 0.82 means two areas tend to move together; it does not show which comes first or whether one causes the other.</p>
             <p><b>Thriving Individuals</b> correlates highly with almost every other dimension, which puts it at the centre of the structure.</p>
             <p><b>Weakest, still moderate:</b> Fair Rewards and Healthy Environment against the rest (around 0.66–0.70).</p>
           </div>
@@ -654,6 +654,8 @@
             <li>MAE, RMSE, R² and Pearson correlation between predicted and observed change.</li>
             <li>A model counted as better than the baseline only if its RMSE was lower.</li>
             <li>Negative R² means worse than using the test-set mean; it is not a "negative share of variance explained".</li>
+            <li>MAE is the average absolute miss. RMSE is an error score that gives larger misses more weight; both are in percentage points here, and lower is better.</li>
+            <li>Correlation describes whether predicted and observed changes move together; it does not show cause and effect.</li>
           </ul>
         </div>
       </div>
@@ -662,17 +664,7 @@
         <div class="scroll">
           <table class="mini">
             <thead><tr><th>Target dimension</th><th>Top 3 predictors (importance %)</th><th>Top-3 total</th></tr></thead>
-            <tbody>
-              <tr><td>Culture of Integrity</td><td>Thriving Individuals 25.5 · Organised Processes 18.8 · Agility 17.2</td><td>61.5%</td></tr>
-              <tr><td>Organisational Agility</td><td>Organised Processes 28.0 · Thriving Individuals 25.0 · Engagement 11.4</td><td>64.4%</td></tr>
-              <tr><td>Responsible Leadership</td><td>Attractive Careers 29.3 · Thriving Individuals 18.5 · Organised Processes 18.0</td><td>65.8%</td></tr>
-              <tr><td>Healthy Environment</td><td>Organised Processes 25.0 · Engagement 24.1 · Agility 13.9</td><td>63.0%</td></tr>
-              <tr><td>Engagement</td><td>Thriving Individuals 27.5 · Culture of Integrity 12.4 · Attractive Careers 12.1</td><td>52.0%</td></tr>
-              <tr><td>Organised Processes</td><td>Agility 28.1 · Thriving Individuals 21.9 · Responsible Leadership 12.6</td><td>62.6%</td></tr>
-              <tr><td>Fair Rewards</td><td>Engagement 20.1 · Thriving Individuals 18.5 · Attractive Careers 16.5</td><td>55.1%</td></tr>
-              <tr><td>Attractive Careers</td><td>Responsible Leadership 29.8 · Thriving Individuals 21.6 · Engagement 14.4</td><td>65.8%</td></tr>
-              <tr><td>Thriving Individuals</td><td>Agility 23.1 · Engagement 19.9 · Culture of Integrity 16.3</td><td>59.3%</td></tr>
-            </tbody>
+              <tbody id="predictor-rows"></tbody>
           </table>
         </div>
       </div>
@@ -699,9 +691,9 @@
     <!-- RECOMMENDATIONS -->
     <h3 class="reveal">What the business should do</h3>
     <div class="grid3">
-      <div class="card rec reveal"><div class="num">01</div><h3 style="font-size:1.3rem">Focus on the central dimensions</h3><p>Autonomy, ownership, process efficiency and adaptability (Thriving Individuals, Organised Processes, Organisational Agility) are the most connected parts of the survey. Treat them as priorities and test the effect through pilots, since the data cannot prove causation.</p></div>
-      <div class="card rec reveal"><div class="num">02</div><h3 style="font-size:1.3rem">Treat pay &amp; well-being on their own</h3><p>Fair Rewards and Healthy Environment are the least explained by other dimensions. Don't expect them to improve as a side effect; they need direct, specific interventions.</p></div>
-      <div class="card rec reveal"><div class="num">03</div><h3 style="font-size:1.3rem">Make last year's result the bar to beat</h3><p>In this data no model beat last year's result, so use it as the baseline. This does not rule out machine learning: adopt more complex models once they beat that bar consistently over a longer history.</p></div>
+      <div class="card rec reveal"><div class="num">01</div><h3 style="font-size:1.3rem">Pilot actions around connected experience areas</h3><p>Test initiatives that support autonomy and ownership, simplify processes and help teams adapt. Track Thriving Individuals, Organised Processes and Organisational Agility against a stable baseline before scaling. The survey shows relationships, not proof of cause and effect.</p></div>
+      <div class="card rec reveal"><div class="num">02</div><h3 style="font-size:1.3rem">Give rewards and wellbeing direct attention</h3><p>Healthy Environment remains below its 2023 level and was flat in 2025. Fair Rewards recovered by 2.8 p.p.; sustain that focus and check what employees say rather than expecting unrelated initiatives to explain the change.</p></div>
+      <div class="card rec reveal"><div class="num">03</div><h3 style="font-size:1.3rem">Keep the simple forecast as the benchmark</h3><p>No complex model beat the no-change baseline in this test. Use that baseline for now, and consider more complex forecasting only after it consistently performs better across a longer history.</p></div>
     </div>
 
     <div class="next reveal">
@@ -768,7 +760,7 @@
       var el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || '', dec = +el.dataset.dec || 0, start = performance.now(), dur = 1500;
       (function tick(t){
         var p = Math.min((t - start)/dur, 1), eased = 1 - Math.pow(1-p, 3), v = target*eased;
-        el.textContent = (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suffix;
+        el.textContent = (el.dataset.prefix || '') + (dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US')) + suffix;
         if(p < 1) requestAnimationFrame(tick);
       })(start);
       co.unobserve(el);
@@ -830,21 +822,66 @@
   }
 </script>
 <script>
-const ALLOWED=["0", "0.0", "0.09", "0.13", "0.2", "0.3", "0.45", "0.613", "0.617", "0.618", "0.624", "0.66", "0.666", "0.672", "0.682", "0.683", "0.691", "0.692", "0.693", "0.697", "0.70", "0.740", "0.755", "0.757", "0.764", "0.779", "0.786", "0.8", "0.80", "0.82", "000", "01", "02", "03", "1", "1.0", "1.00", "1.2", "1.3", "1.38", "1.4", "1.5", "1.75", "1.78", "1.9", "100", "11.4", "12", "12.1", "12.4", "12.6", "13.9", "14.4", "16.3", "16.5", "17.2", "18.0", "18.5", "18.8", "19.9", "2", "2.0", "2.24", "2.27", "2.30", "2.5", "2.6", "2.65", "2.8", "20", "20.1", "2023", "2024", "2025", "21.6", "21.9", "22", "22293", "23", "23.1", "24", "24.1", "25", "25.0", "25.5", "27.5", "270", "28.0", "28.1", "29.3", "29.8", "293", "3", "3.41", "3.85", "30", "300", "35", "384", "4", "4.24", "4.66", "42", "48.1", "5", "500", "52.0", "55.1", "56.9", "59.3", "6", "600", "61.5", "61.8", "62.4", "62.6", "63.0", "639", "64.4", "65.8", "66", "67.2", "68", "68.3", "69", "69.1", "69.2", "7", "70", "71", "72", "73", "74", "75.5", "75.7", "76", "77", "78", "78.3", "78.6", "79.0", "8", "80", "80.2", "82", "82.6", "82.7", "82.9", "83.2", "85.0", "85.2", "85.5", "85.6", "85.8", "85.9", "86.2", "86.3", "86.4", "87.4", "87.9", "89.3", "9", "90.1", "90.2", "90.5", "90.6", "90.9", "900", "91.2", "91.7", "91.9", "95.2", "96.7"];
+const ALLOWED=new Set();
 
 const $=s=>document.querySelector(s),Y=[2023,2024,2025],N=[7384,7270,7639];
 /* [key,name,fav23,fav24,fav25,R² (linear, mean of 3 cycles),role,top-3 RF predictors,Δ23→24,Δ24→25] copied unchanged from the portfolio page */
 const D=[
-['INT','Culture of Integrity',91.9,90.5,91.7,.672,'',[['IND',25.5],['PRO',18.8],['AGI',17.2]],-1.4,1.2],
-['AGI','Organisational Agility',79.0,78.3,80.2,.757,'lever',[['PRO',28.0],['IND',25.0],['ENG',11.4]],-.8,1.9],
-['LID','Responsible Leadership',86.4,86.2,86.3,.692,'',[['CAR',29.3],['IND',18.5],['PRO',18.0]],-.2,0],
-['AMB','Healthy Environment',87.9,85.9,85.8,.624,'autonomous',[['PRO',25.0],['ENG',24.1],['AGI',13.9]],-2.0,0],
-['ENG','Engagement',90.2,89.3,90.6,.691,'',[['IND',27.5],['INT',12.4],['CAR',12.1]],-.8,1.2],
-['PRO','Organised Processes',83.2,82.9,85.5,.755,'lever',[['AGI',28.1],['IND',21.9],['LID',12.6]],-.3,2.6],
-['REC','Fair Rewards',82.9,82.7,85.6,.618,'autonomous',[['ENG',20.1],['IND',18.5],['CAR',16.5]],-.2,2.8],
-['CAR','Attractive Careers',90.1,90.9,91.2,.683,'',[['LID',29.8],['IND',21.6],['ENG',14.4]],.8,.2],
-['IND','Thriving Individuals',85.2,85.0,87.4,.786,'lever',[['AGI',23.1],['ENG',19.9],['INT',16.3]],-.3,2.5]];
+ ['INT','Culture of Integrity',91.9,90.5,91.7,.672,'',[['IND',25.5],['PRO',18.8],['AGI',17.2]],-1.4,1.2,.682],
+ ['AGI','Organisational Agility',79.0,78.3,80.2,.757,'lever',[['PRO',28.0],['IND',25.0],['ENG',11.4]],-.8,1.9,.764],
+ ['LID','Responsible Leadership',86.4,86.2,86.3,.692,'',[['CAR',29.3],['IND',18.5],['PRO',18.0]],-.2,0,.683],
+ ['AMB','Healthy Environment',87.9,85.9,85.8,.624,'autonomous',[['PRO',25.0],['ENG',24.1],['AGI',13.9]],-2.0,0,.613],
+ ['ENG','Engagement',90.2,89.3,90.6,.691,'',[['IND',27.5],['INT',12.4],['CAR',12.1]],-.8,1.2,.692],
+ ['PRO','Organised Processes',83.2,82.9,85.5,.755,'lever',[['AGI',28.1],['IND',21.9],['LID',12.6]],-.3,2.6,.740],
+ ['REC','Fair Rewards',82.9,82.7,85.6,.618,'autonomous',[['ENG',20.1],['IND',18.5],['CAR',16.5]],-.2,2.8,.617],
+ ['CAR','Attractive Careers',90.1,90.9,91.2,.683,'',[['LID',29.8],['IND',21.6],['ENG',14.4]],.8,.2,.666],
+ ['IND','Thriving Individuals',85.2,85.0,87.4,.786,'lever',[['AGI',23.1],['ENG',19.9],['INT',16.3]],-.3,2.5,.779]];
 const dm=k=>D.find(d=>d[0]==k),fm=n=>(n>0?'+':n<0?'−':'')+Math.abs(n).toFixed(1);
+const priorityGroup=d=>d[4]<86?(d[5]>=.75?'first':'direct'):(d[5]>=.75?'leverage':'maintain');
+function renderProjectData(){
+ const trends=$('#trend-rows');
+ if(trends)trends.innerHTML=D.map(d=>`<tr class="${d[9]>=2.5?'hi':''}"><td>${d[1]}</td><td>${d[2].toFixed(1)}%</td><td>${d[3].toFixed(1)}%</td><td>${d[4].toFixed(1)}%</td><td class="d ${d[8]>0?'up':d[8]<0?'dn':'fl'}">${fm(d[8])}</td><td class="d ${d[9]>0?'up':d[9]<0?'dn':'fl'}">${fm(d[9])}</td></tr>`).join('');
+ const drivers=$('#driver-bars');
+ if(drivers){const sorted=[...D].sort((a,b)=>b[5]-a[5]);drivers.innerHTML='<div class="ref"><span>mean 0.70</span></div>'+sorted.map(d=>`<div class="barrow"><div class="top"><span>${d[1]}${d[6]=='lever'?'<em class="win">connected</em>':d[6]=='autonomous'?'<em class="aut">direct attention</em>':''}</span><span>R² ${d[5].toFixed(3)} · RF ${d[10].toFixed(3)}</span></div><div class="track"><div class="fill ${d[6]=='autonomous'?'gold':d[6]?'':'light'}" data-w="${(d[5]*100).toFixed(1)}"></div></div></div>`).join('')}
+ const predictors=$('#predictor-rows');
+ if(predictors)predictors.innerHTML=D.map(d=>`<tr><td>${d[1]}</td><td>${d[7].map(p=>`${dm(p[0])[1]} ${p[1].toFixed(1)}`).join(' · ')}</td><td>${d[7].reduce((sum,p)=>sum+p[1],0).toFixed(1)}%</td></tr>`).join('');
+ renderPriority();
+ ALLOWED.clear();
+ const text=$('#project')?.textContent||'';
+ (text.match(/\d+(?:,\d{3})*(?:\.\d+)?/g)||[]).forEach(n=>ALLOWED.add(n.replace(/,/g,'')));
+}
+const PRIORITY_COPY={
+ first:{title:'Act first',decision:'Test a focused pilot on decision clarity and process friction, tracking Organisational Agility and Organised Processes together.',evidence:'These are the two lowest 2025 favourability scores (80.2% and 85.5%) and both are strongly connected to other survey dimensions (R² above 0.75).',uncertainty:'The pattern is associative, not causal. Test in a small pilot before scaling.'},
+ direct:{title:'Act directly',decision:'Give Healthy Environment a direct review. Sustain attention to Fair Rewards rather than expecting it to improve as a side effect of other initiatives.',evidence:'Healthy Environment is 85.8%, down 2.1 p.p. since 2023 and flat in 2025. Fair Rewards is 85.6% after a +2.8 p.p. recovery; both have lower connectedness (R² below 0.63).',uncertainty:'The survey does not identify the causes of these scores. Validate the issues with employee feedback before choosing actions.'},
+ leverage:{title:'Use as a leverage point',decision:'Maintain autonomy and ownership practices, and test whether they move alongside agility and process clarity.',evidence:'Thriving Individuals is 87.4% favourable and the most connected dimension (R² 0.786); its 2025 correlation with Agility is 0.80.',uncertainty:'Connectedness does not prove that autonomy initiatives will improve other outcomes. Compare pilot teams with similar teams.'},
+ maintain:{title:'Maintain and monitor',decision:'Maintain strong results; include career conversations in leadership development and monitor whether the stable leadership score changes.',evidence:'Responsible Leadership is stable at 86.3%. Attractive Careers is its strongest Random Forest predictor (29.3%); Culture, Engagement and Careers are all above 90% in 2025.',uncertainty:'Predictor importance is not an intervention effect. Confirm needs with aggregated feedback and review the next survey.'}
+};
+const PRIORITY_PLANS={
+ AGI:{title:'Agility and decision-clarity pilot',objective:'Test whether clearer decisions and fewer process barriers accompany stronger perceived agility.',activities:'Choose a small set of pilot teams and comparable teams; map decision delays; agree one or two process changes; review aggregated feedback at the next cycle.',indicator:'Organisational Agility favorability and agreed process lead-time measures.'},
+ PRO:{title:'Process clarity pilot',objective:'Test whether clearer processes accompany improved perceptions of organisational agility.',activities:'Select a few teams; map handoffs and access to information; trial standard-work and decision-clarity routines; compare with similar teams.',indicator:'Organised Processes and Organisational Agility favorability at the next cycle.'},
+ AMB:{title:'Healthy Environment listening and action',objective:'Understand the decline in Healthy Environment and select an action with employees.',activities:'Review aggregated comments and run facilitated listening sessions; identify one issue to test; preserve anonymity and minimum group sizes.',indicator:'Healthy Environment favorability and agreed, aggregated follow-up measures.'},
+ REC:{title:'Fair Rewards follow-up',objective:'Understand what contributed to the 2025 recovery and identify what employees still need.',activities:'Review aggregated feedback on pay, benefits and fairness; validate the +2.8 p.p. recovery with stakeholders; agree a targeted follow-up.',indicator:'Fair Rewards favorability and employee feedback at the next cycle.'},
+ IND:{title:'Autonomy and ownership pilot',objective:'Test whether practices supporting autonomy and ownership move alongside agility and process clarity.',activities:'Select pilot and comparable teams; agree practical autonomy and ownership changes; review results at the next survey cycle.',indicator:'Thriving Individuals, Organisational Agility and Organised Processes favorability.'},
+ LID:{title:'Leadership and career conversations',objective:'Maintain leadership strengths and test whether regular career conversations support employee experience.',activities:'Pilot structured career conversations and feedback practices with a small leadership cohort; review aggregated participant feedback.',indicator:'Responsible Leadership and Attractive Careers favorability at the next cycle.'},
+ INT:{title:'Maintain integrity and trust',objective:'Maintain the strong Culture of Integrity result while checking for new risks.',activities:'Continue existing integrity practices; review aggregated feedback and concerns through appropriate channels.',indicator:'Culture of Integrity favorability and aggregated feedback.'},
+ ENG:{title:'Sustain engagement',objective:'Maintain strong engagement while checking what employees value most.',activities:'Review aggregated employee feedback; reinforce effective practices and monitor engagement at the next survey cycle.',indicator:'Engagement favorability and aggregated feedback.'},
+ CAR:{title:'Maintain career strengths',objective:'Maintain attractive career perceptions and identify opportunities for development.',activities:'Review access to learning and growth; include employee career conversations and track aggregated feedback.',indicator:'Attractive Careers favorability and participation in development opportunities.'}
+};
+function renderPriority(){
+ const host=$('#priority-content');if(!host)return;
+ const order=['first','direct','leverage','maintain'];
+ host.innerHTML=order.map(group=>{
+  const dimensions=D.filter(d=>priorityGroup(d)==group);
+  const copy=PRIORITY_COPY[group];
+  return `<article class="priority-card"><h4>${copy.title}</h4><p><b>Suggested decision:</b> ${copy.decision}</p><p><b>Evidence:</b> ${copy.evidence}</p><p><b>What remains uncertain:</b> ${copy.uncertainty}</p><div class="priority-dimensions">${dimensions.map(d=>`<span class="priority-dimension">${d[1]} · ${d[4].toFixed(1)}% <button type="button" onclick="startPriorityPlan('${d[0]}')">Open Project 2 plan</button></span>`).join('')}</div></article>`;
+ }).join('');
+}
+function startPriorityPlan(key){
+ const d=dm(key),p=PRIORITY_PLANS[key];if(!d||!p)return;
+ let a=A.find(x=>x.priorityKey==key&&x.status!='Completed');
+ if(!a){a={id:Date.now(),priorityKey:key,dim:key,title:p.title,problem:`${d[1]}: ${d[4].toFixed(1)}% favourable in 2025. This is a signal for follow-up, not proof of a cause.`,evidence:`Project 1: ${d[1]} was ${d[4].toFixed(1)}% favourable in 2025 (${fm(d[9])} p.p. vs 2024). Within-cycle R² was ${d[5].toFixed(3)}; this describes statistical connectedness, not causal influence.`,objective:p.objective,intervention:p.objective,activities:p.activities,owner:'',deadline:'',indicator:p.indicator,status:'Draft',src:'Project 1 priority matrix',target:null,tips:[],log:[]};lg(a,'Project 1 decision matrix','Created a pre-filled draft for '+d[1]);A.unshift(a);save()}
+ S.role='leader';S.v='planner';render();$('#cta').scrollIntoView({behavior:'smooth'});
+}
 const T={V:'Verified data',S:'Statistical result',I:'Interpretation',H:'Hypothesis',R:'Recommendation'};
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 /* Deterministic demo-mode answers: pre-written, grounded only in the numbers above */
@@ -882,8 +919,9 @@ const Q=[
 ['Next investigation','H','Hypothesis: feedback and career conversations matter most. Clarify with aggregated comments, at minimum group size.'],
 ['Potential intervention','R','A leadership development journey on trust, feedback, communication and team collaboration, including career conversations.']]}];
 const S={v:'overview',y:2025,g:'all',d:'AGI',a:null,edit:null,sy:false,demo:-1,role:'leader'};
-let A=[];try{A=JSON.parse(localStorage.getItem('cta2')||'[]')}catch(e){}
+let migratedLegacyStatus=false,A=[];try{A=JSON.parse(localStorage.getItem('cta2')||'[]');if(!Array.isArray(A))A=[];A.forEach(a=>{if(a.status=='Proposed'){a.status='Draft';migratedLegacyStatus=true}})}catch(e){A=[]}
 const save=()=>{try{localStorage.setItem('cta2',JSON.stringify(A))}catch(e){}};
+if(migratedLegacyStatus)save();
 const bar=(l,r,w,c)=>`<div><div class="top"><span>${l}</span><span>${r}</span></div><div class="track"><div class="fill ${c||''}" data-w="${w}"></div></div></div>`;
 const V={};
 V.overview=()=>{const i=Y.indexOf(S.y),all=D.map(d=>({d,v:d[2+i],dl:i?d[7+i]:null})).sort((a,b)=>b.v-a.v),rows=all.filter(r=>S.g=='all'||r.d[6]==S.g),hi=all[0],lo=all[8],gn=i?[...all].sort((a,b)=>b.dl-a.dl)[0]:null;
@@ -916,14 +954,13 @@ return `<span class="eyebrow">AI insights</span><h2>Ask the evidence</h2><p clas
 ${q?`<div class="card">${q.rows.map(r=>`<div class="insight"><span class="kicker">${r[0]}<span class="t ${r[1]}">${T[r[1]]}</span></span><p>${r[2]}</p></div>`).join('')}
 <div class="row"><button class="btn btn-primary" onclick="addFrom(${S.a});go('planner')">Create AI draft action</button><span class="note" style="margin:0">It stays a draft until the leader submits it and a consultant approves it.</span></div></div>`:'<p class="note">Select a question above.</p>'}`};
 const F=[['title','Title'],['problem','Problem or opportunity'],['evidence','Supporting evidence'],['objective','Development objective'],['intervention','Recommended intervention'],['activities','Suggested activities'],['owner','Responsible person'],['deadline','Deadline'],['indicator','Success indicators']];
-function card0(a){if(S.edit===a.id)return `<div class="card"><span class="kicker">Edit action</span>${F.map(f=>`<label>${f[1]}</label>${f[0]=='deadline'?`<input type="date" id="f_${f[0]}" value="${esc(a[f[0]])}">`:`<textarea rows="${['title','owner'].includes(f[0])?1:2}" id="f_${f[0]}">${esc(a[f[0]])}</textarea>`}`).join('')}<label>Linked dimension (for impact tracking)</label><select id="f_dim"><option value="">None</option>${D.map(d=>`<option value="${d[0]}"${d[0]==a.dim?' selected':''}>${d[1]}</option>`).join('')}</select><div class="row"><button class="btn btn-primary sm" onclick="saveEdit(${a.id})">Save</button><button class="btn btn-ghost sm" onclick="S.edit=null;render()">Cancel</button></div></div>`;
-return `<div class="card"><div class="top"><b style="font-family:var(--serif);font-size:1.3rem">${esc(a.title)}</b><span class="st">${a.status}</span></div><dl>${F.slice(1).map(f=>`<dt>${f[1]}</dt><dd>${esc(a[f[0]])||'—'}</dd>`).join('')}<dt>Source</dt><dd>${esc(a.src)}</dd></dl><div class="row">${a.status=='Proposed'?`<button class="btn btn-primary sm" onclick="setS(${a.id},'Approved')">Approve</button><button class="btn btn-ghost sm" onclick="del(${a.id})">Reject</button>`:`<select onchange="setS(${a.id},this.value)">${['Approved','In Progress','Completed'].map(s=>`<option${s==a.status?' selected':''}>${s}</option>`).join('')}</select><button class="btn btn-ghost sm" onclick="del(${a.id})">Delete</button>`}<button class="btn btn-ghost sm" onclick="S.edit=${a.id};render()">Edit</button></div></div>`}
+function card0(a){return `<div class="card"><span class="kicker">Edit action</span>${F.map(f=>`<label>${f[1]}</label>${f[0]=='deadline'?`<input type="date" id="f_${f[0]}" value="${esc(a[f[0]])}">`:`<textarea rows="${['title','owner'].includes(f[0])?1:2}" id="f_${f[0]}">${esc(a[f[0]])}</textarea>`}`).join('')}<label>Linked dimension (for impact tracking)</label><select id="f_dim"><option value="">None</option>${D.map(d=>`<option value="${d[0]}"${d[0]==a.dim?' selected':''}>${d[1]}</option>`).join('')}</select><div class="row"><button class="btn btn-primary sm" onclick="saveEdit(${a.id})">Save</button><button class="btn btn-ghost sm" onclick="S.edit=null;render()">Cancel</button></div></div>`}
 
-const ORD=['Draft','In review','Changes requested','Approved','In Progress','Completed'],AL=new Set(ALLOWED);
+const ORD=['Draft','In review','Changes requested','Approved','In Progress','Completed'],AL=ALLOWED;
 const nowS=()=>new Date().toLocaleString('en-GB',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'});
 const lg=(a,who,what)=>{(a.log=a.log||[]).push({t:nowS(),who,what})};
 function addFrom(n){const x=A.find(a=>a.q===n);if(x)return x;const q=Q[n],a={id:Date.now()+n,q:n,dim:q.dim,title:q.act.t,problem:q.rows[0][2],evidence:q.rows[1][2],objective:q.act.o,intervention:q.rows[6][2],activities:q.act.a,owner:'',deadline:'',indicator:q.act.i,status:'Draft',src:'AI draft (demo mode)',target:null,tips:[],log:[]};a.ai={};F.forEach(f=>a.ai[f[0]]=a[f[0]]);lg(a,'AI (demo mode)','Created draft from the question “'+q.q+'”');A.unshift(a);save();return a}
-function chk(a){const m=[a.problem,a.evidence,a.objective,a.intervention,a.activities,a.indicator].join(' ').match(/\d+(?:\.\d+)?/g)||[],bad=[...new Set(m.filter(x=>!AL.has(x)))];return bad.length?`<div class="syn">Evidence check: ${bad.join(', ')} not found in the source analysis. Verify before approving.</div>`:`<div class="insight"><p>Evidence check: all ${m.length} numbers appear in the source analysis (Project 1).</p></div>`}
+function chk(a){const m=[a.problem,a.evidence,a.objective,a.intervention,a.activities,a.indicator].join(' ').match(/\d+(?:,\d{3})*(?:\.\d+)?/g)||[],bad=[...new Set(m.filter(x=>!AL.has(x.replace(/,/g,''))))];return bad.length?`<div class="syn"><b>Number cross-check:</b> ${bad.join(', ')} not found in Project 1. This checks number presence only; review the context and claim before approval.</div>`:`<div class="insight"><p><b>Number cross-check:</b> ${m.length?`All ${m.length} numbers in this draft appear somewhere in Project 1.`:'No numeric values to cross-check.'} This does not verify that a number supports the statement or is used in the correct context; review before approval.</p></div>`}
 function diffH(a){const c=a.ai?F.filter(f=>a.ai[f[0]]!==a[f[0]]):[];return c.length?`<dl>${c.map(f=>`<dt>${f[1]}</dt><dd><s>${esc(a.ai[f[0]])||'—'}</s><br>${esc(a[f[0]])||'—'}</dd>`).join('')}</dl>`:'<p class="note">'+(a.ai?'No human changes yet: identical to the AI draft.':'Created by a person, no AI draft.')+'</p>'}
 const who=()=>S.role=='consultant'?'Consultant':'Leader';
 function setS(id,s,w,t){const a=A.find(x=>x.id==id);a.status=s;lg(a,w||who(),t||'Status set to '+s);save();render()}
@@ -936,7 +973,7 @@ function card(a){if(S.edit===a.id)return card0(a);const L=S.role=='leader',ed=['
 const b=L?(ed?`<button class="btn btn-primary sm" onclick="submit(${a.id})">Submit for review</button><button class="btn btn-ghost sm" onclick="S.edit=${a.id};render()">Edit</button><button class="btn btn-ghost sm" onclick="del(${a.id})">Discard</button>`:ap?`<select onchange="setS(${a.id},this.value)">${['Approved','In Progress','Completed'].map(s=>`<option${s==a.status?' selected':''}>${s}</option>`).join('')}</select>`:'<span class="note" style="margin:0">Waiting for consultant review.</span>'):`<textarea id="c_${a.id}" rows="2" placeholder="Comment or tip for the leader"></textarea>${a.status=='In review'?`<button class="btn btn-primary sm" onclick="review(${a.id},1)">Approve</button><button class="btn btn-ghost sm" onclick="review(${a.id},0)">Request changes</button>`:''}<button class="btn btn-ghost sm" onclick="tip(${a.id})">Add tip</button>`;
 return `<div class="card"><div class="top"><b style="font-family:var(--serif);font-size:1.3rem">${esc(a.title)}</b><span class="st">${a.status}</span></div><dl>${F.slice(1).map(f=>`<dt>${f[1]}</dt><dd>${esc(a[f[0]])||'—'}</dd>`).join('')}<dt>Source</dt><dd>${esc(a.src)}</dd></dl>${chk(a)}${(a.tips||[]).map(t=>`<div class="insight"><span class="kicker">${t.who} · ${t.t}</span><p>${esc(t.c)}</p></div>`).join('')}<details><summary class="link">AI draft vs current version</summary>${diffH(a)}</details><details><summary class="link">Audit trail (${(a.log||[]).length})</summary><ul class="l">${(a.log||[]).map(l=>`<li>${l.t} · <b>${l.who}</b>: ${esc(l.what)}</li>`).join('')||'<li>No entries.</li>'}</ul></details><div class="row">${b}</div></div>`}
 V.planner=()=>{const L=S.role=='leader',n=A.filter(a=>a.status=='In review').length,O=L?ORD:['In review',...ORD.filter(s=>s!='In review')];return `<span class="eyebrow">Action planner · ${L?'Leader view':'Consultant view'}</span><h2>${L?'From finding to action plan':'Review queue'}</h2><p class="lead">${L?'Ask the AI for a draft, edit it and submit it. A consultant reviews it before it becomes an official action.':n+' plan(s) waiting for review. Check the evidence, add tips, then approve or request changes.'} Actions are saved in this browser only.</p>${L?'<div class="row"><button class="btn btn-primary" onclick="newA()">+ New action</button></div>':''}${O.map(s=>{const l=A.filter(a=>a.status==s);return `<h3>${s} (${l.length})</h3>${l.map(card).join('')||'<p class="note">Nothing here yet.</p>'}`}).join('')}`};
-function tabsHtml(){return `<div class="row" style="margin:0 0 4px"><span class="kicker" style="margin:0">View as</span>${[['leader','Leader'],['consultant','Consultant']].map(r=>`<button class="ctab ${S.role==r[0]?'active':''}" onclick="S.role='${r[0]}';render()">${r[1]}</button>`).join('')}</div><div class="row" style="margin-top:0">${NAV.map(n=>`<button class="ctab ${n[0]==S.v?'active':''}" onclick="go('${n[0]}')">${n[1]}</button>`).join('')}</div>`}
+function tabsHtml(){return `<p class="sim-notice"><b>Prototype simulation:</b> Leader and Consultant are view modes only. There is no login or access control; demo actions are saved in this browser.</p><div class="row" style="margin:0 0 4px"><span class="kicker" style="margin:0">View as</span>${[['leader','Leader'],['consultant','Consultant']].map(r=>`<button class="ctab ${S.role==r[0]?'active':''}" onclick="S.role='${r[0]}';render()">${r[1]}</button>`).join('')}</div><div class="row" style="margin-top:0">${NAV.map(n=>`<button class="ctab ${n[0]==S.v?'active':''}" onclick="go('${n[0]}')">${n[1]}</button>`).join('')}</div>`}
 V.impact=()=>{const l=A.filter(a=>['Approved','In Progress','Completed'].includes(a.status)&&a.dim),cov=l.map(a=>a.dim),rem=[...D].filter(d=>!cov.includes(d[0])).sort((a,b)=>a[4]-b[4]).slice(0,3);
 return `<span class="eyebrow">Impact tracking</span><h2>Baseline, measurement and target</h2><p class="lead">Baseline is the 2025 cycle. No follow-up survey exists yet, so there is no measured impact. Observed history is context, never proof that an action worked.</p>
 <div class="row"><label style="margin:0"><input type="checkbox" style="width:auto" ${S.sy?'checked':''} onchange="S.sy=this.checked;render()"> Show illustrative follow-up (synthetic)</label></div>
@@ -947,9 +984,11 @@ V.responsible=()=>`<span class="eyebrow">Responsible AI and methodology</span><h
 <div class="card"><span class="kicker">Data and transformations</span><ul class="l"><li>All numbers are copied unchanged from the featured project page (favorability, Δ, R², correlations, predictors, sample sizes). No individual-level records exist here.</li><li>Synthetic values appear only in Impact tracking, behind a clearly labelled toggle.</li><li>The AI is a deterministic demo mode. A live LLM would require a server-side proxy holding the API key.</li><li><a class="link" href="#project">Original analysis and methodology →</a></li></ul></div>`;
 const NAV=[['overview','Overview'],['diagnosis','Diagnosis'],['ai','AI Insights'],['planner','Action Planner'],['impact','Impact'],['responsible','Responsible AI']];
 function go(v){S.v=v;render();$('#cta').scrollIntoView()}
+function syncDemoSpace(){const dp=$('#demo'),open=dp.classList.contains('on');document.body.classList.toggle('demo-open',open);document.body.style.paddingBottom=open?(dp.offsetHeight+24)+'px':''}
+window.addEventListener('resize',syncDemoSpace);
 function render(){$('#tabs').innerHTML=tabsHtml();$('#app').innerHTML=V[S.v]();
  const dp=$('#demo'),s=ST[S.demo];dp.className=s?'on':'';if(s)dp.firstChild.innerHTML=`<p><b>Step ${S.demo+1} of ${ST.length}</b><br>${s[1]}</p><div class="row" style="margin:0"><button class="btn" onclick="demo(-1)">Exit</button><button class="btn w" onclick="demo(${S.demo+1})">${S.demo==ST.length-1?'Finish':'Next'}</button></div>`;
- requestAnimationFrame(()=>requestAnimationFrame(()=>document.querySelectorAll('#cta .fill').forEach(b=>b.style.width=b.dataset.w+'%')))}
+ syncDemoSpace();requestAnimationFrame(()=>{syncDemoSpace();document.querySelectorAll('#cta .fill').forEach(b=>b.style.width=b.dataset.w+'%')})}
 const ST=[
 ['overview','Start with the overview, built from the real favorability data of Project 1 (2023–2025).',()=>{S.role='leader';S.y=2025;S.g='all'}],
 ['overview','Organisational Agility is the lowest-scoring dimension in 2025 (80.2%): a real metric from the MBA project.',()=>{}],
@@ -961,7 +1000,8 @@ const ST=[
 ['impact','Baseline and target are tracked. No follow-up data exists, so only a clearly labelled synthetic view is possible.',()=>{S.role='leader';S.sy=true}],
 ['impact','From analysis to diagnosis, AI draft, human review and impact tracking. Try it yourself.',()=>{}]];
 function demo(n){if(n<0||n>=ST.length){S.demo=-1;render();return}S.demo=n;S.v=ST[n][0];ST[n][2]();render();$('#cta').scrollIntoView()}
-render();
+ renderProjectData();
+ render();
 
 </script>
 </body>
